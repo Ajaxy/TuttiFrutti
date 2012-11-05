@@ -1,0 +1,3 @@
+%w[Acai_Berry Almond Apple_Pie Banana Birthday_Cake Black_Cherry Blueberry Cappuccino Cheese_Cake Cherry_Amaretto Chestnut Chocolate_Coffee_Bean Chocolate_Mint Chocolate_Rasberry Chocolate Chocolate_Strawberry Cinnamon_Cookie Coconut Coffee CreamyFruit Grape Green_Apple Green_Tea Guava Kiwi Lemon Lychee Mango Melon Mint MixedFruits NSA_Cinnamon_Bun Orange Original Papaya Passion Peach Peanut_Butter Pina_Colada Pineapple Pistachio Pomegranate Raspberry Rocky_Road Royal_Velvet Salted_Caramel Strawberry TripleBerry Tutti_Frutti Vanilla Watermelon].each do |code|
+  Taste.create!(code: code, name: code, color: "#818182")
+end

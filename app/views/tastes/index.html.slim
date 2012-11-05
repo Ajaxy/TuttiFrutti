@@ -1,0 +1,41 @@
+- @title = "Вкусы"
+- @subnav_title = "Вкусы Тутти"
+- @subnav = subnav(:tastes)
+
+- content_for :scripts do
+  javascript:
+    VK.Widgets.Like("vk_like", { type: "button" });
+
+- content_for :facebook_metatags do
+  meta content="Website" property="og:type"
+  meta content="http://tuttifruttirussia.com/tastes/" property="og:url"
+  meta content="http://tuttifruttirussia.com/images/tffblogo.png" property="og:image"
+  meta content="Tutti Frutti Йогурт Мороженое" property="og:title"
+  meta content="Tutti Frutti Russia" property="og:site_name"
+  meta content="Выбери свои 12 вкусов Тутти Фрутти!" property="og:description"
+  meta content="284364358347355" property="fb:app_id"
+
+h2#tastes-header Вкусы Tutti Frutti
+#tastes-intro
+  p Мы очень хотим, чтобы вам у нас понравилось.
+  p Поэтому предлагаем вам самим выбирать вкусы для кафе Tutti Frutti в России. В разных странах у людей разные предпочтения, в Америке любят арахисовое масло, а в Азии экзотические фрукты. А что хотели бы попробовать вы?
+  p Если вас заинтересовал вкус - откройте его в большом окне и нажмите кнопку “Мне нравится”.
+  p Выберите вкусы, которые вам по душе. Поделитесь своим выбором с друзьями. Или сравните, насколько ваш вкус совпадает со вкусом других людей в нашем TOP 12.
+#vote-results
+  ' Вы выбрали
+  span.large-number 0
+  '
+  span#taste-ending вкусов
+  ul.social
+    li
+      .fb-like data-action="recommend" data-href="http://tuttifruttirussia.com/tastes/" data-layout="button_count" data-send="false" data-show-faces="true" data-width="150"
+    li
+      #vk_like
+  .fb-like-container
+  .vk-like-container
+#fruits-top12
+#tastes-container.row = render @tastes, show_votes: false
+#taste-modal.modal.hide.fade.in tabindex="-1"
+  .modal-body
+    - if @taste
+      = render "tastes/large_taste", taste: @taste

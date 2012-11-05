@@ -1,0 +1,10 @@
+- content_for :content do
+  .row
+    .span3
+      #subnav
+        h3.subnav-header = @subnav_title
+        = @subnav
+
+    #inner-content.span9.justify = yield
+
+= render template: "layouts/application"

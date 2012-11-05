@@ -1,0 +1,101 @@
+
+- content_for :facebook_metatags do
+  meta property="og:type" content="Website"
+  meta property="og:url" content="http://tuttifruttirussia.com/"
+  meta property="og:image" content="http://tuttifruttirussia.com/images/tffblogo.png"
+  meta property="og:title" content="Tutti Frutti Йогурт Мороженое"
+  meta property="og:site_name" content="TuttiFrutti Russia"
+  meta property="og:description" content="Tutti Frutti Frozen Yogurt – это крупнейшая международная сеть кафе, работающая по модели self-serve."
+  meta property="fb:app_id" content="284364358347355"
+
+- content_for :scripts do
+  javascript:
+    VK.Widgets.Like("vk_like", { type: "button", height: 20 });
+
+#social
+  ul.social
+    li
+      .fb-like data-href="https://www.facebook.com/TuttiFruttiRussia" data-layout="button_count" data-send="false" data-show-faces="false" data-width="450"
+    li
+      #vk_like
+#splash-container
+  #splash
+    #logo
+      #tutti
+      #frutti
+      #dot-1
+      #dot-2
+      #logo-slogan
+        #logo-slogan-en
+        #logo-slogan-ru
+      h1 Tutti Frutti йогурт мороженое
+    #opening
+    #self-serve-preview
+    #self-serve-arrow
+    #yoghurt.carousel.slide.carousel-fade data-interval="3000"
+      .carousel-inner
+        .active.item = image_tag "yoghurts/01.png"
+        .item = image_tag "yoghurts/02.png"
+        .item = image_tag "yoghurts/03.png"
+        .item = image_tag "yoghurts/04.png"
+        .item = image_tag "yoghurts/05.png"
+        .item = image_tag "yoghurts/06.png"
+        .item = image_tag "yoghurts/07.png"
+        .item = image_tag "yoghurts/08.png"
+        .item = image_tag "yoghurts/09.png"
+        .item = image_tag "yoghurts/10.png"
+        .item = image_tag "yoghurts/11.png"
+        .item = image_tag "yoghurts/12.png"
+    #vote-for-tastes
+      = link_to "/tastes" do
+        = image_tag "tastes-preview.png", alt: "Выберите вкусы TuttiFrutti", width: 190, height: 177
+  p.center * "Тутти-фрутти" йогурт&ndash;мороженое
+.divider
+#self-serve
+  h2#self-serve-header Self Serve&mdash;это просто и весело!
+  = image_tag "how-to-serve.png", alt: "How to serve"
+  p.center Если у вас возникнут вопросы, пожалуйста, обращайтесь к нашим консультантам в кафе.
+.divider
+#tasty-healthy
+  h2#tasty-healthy-header Tutti Frutti не только вкусно, но и полезно.
+  #tasty-healthy-pictos.row
+    .tasty-healthy-picto.p1
+    .tasty-healthy-picto.p2
+    .tasty-healthy-picto.p3
+    .tasty-healthy-picto.p4
+    .tasty-healthy-picto.p5
+    .tasty-healthy-picto.p6
+  .row
+    .span4
+      .tasty-healthy-img.th1
+    .span8
+      h3.tasty-healthy-subheader.tsh1 Йогурт-мороженое
+      p Йогурт-мороженое, или замороженный йогурт, появился в 1970-х годах в США, и очень быстро завоевал популярность. Это полезная альтернатива привычным замороженным десертам.  Он содержит протеин, кальций, рибофлавин, пробиотики, витамины В6 и В12. Не удивительно, что йогурт-мороженое любят по всему миру.
+        А главное – в нем меньше калорий, чем в обычном мороженом! Это нравится всем, кто следит за своим весом.
+  .row
+    .span8
+      h3.tasty-healthy-subheader.tsh2 Молочные культуры
+      p Наш организм нуждается в помощи пробиотиков. Они снижают уровень холестерина, нормализуют артериальное давление, уничтожают вредные микроорганизмы и стимулируют рост и жизнедеятельность полезной микрофлоры кишечника. К тому же, пробиотики укрепляют наш иммунитет и здоровье в целом. И пробиотики – важная составляющая Tutti Frutti. Именно благодаря пробиотикам йогурт-мороженое могут есть люди с непереносимостью лактозы.
+    .span4
+      .tasty-healthy-img.th2
+  .row
+    .span4
+      .tasty-healthy-img.th3
+    .span8
+      h3.tasty-healthy-subheader.tsh3 Фрукты
+      p Фрукты по праву называют источником молодости и красоты. Ведь в них содержатся пищевые волокна – пектины, витамины, минералы и множество питательных веществ, которые помогают замедлить процессы старения в организме. И для приготовления Tutti Frutti мы всегда используем только самые свежие фрукты. К тому же, все они – очень вкусные, и большинство из них низкокалорийны.
+  .row
+    .span8
+      h3.tasty-healthy-subheader.tsh4 Витамин С
+      p Витамин С нужен нашему организму каждый день для того, чтобы поддерживать множество жизненно важных процессов. Он стимулирует синтез коллагена, что обеспечивает эластичность и молодость нашей кожи. Улучшает зрение, укрепляет сосуды и кости. Плюс ко всему, он еще и успешно борется с простудой. И конечно, Витамин С содержится в Tutti Frutti!
+    .span4
+      .tasty-healthy-img.th4
+#ice-cream-vs-tutti-frutti.row = image_tag "ice-cream-vs-tutti-frutti.png", alt: "Мороженое VS TuttiFrutti", height: 794, width: 945
+.divider
+#addresses.row
+  h2#addresses-header Наши адреса
+  .address-large
+    h3 ТЦ "РИО"
+    address Дмитровское шоссе, 163А, Москва
+    .map = image_tag "map.png"
+    div = image_tag "opening-soon.png", alt: "Скоро открытие!", width: 300, height: 57, class: "opening-soon"

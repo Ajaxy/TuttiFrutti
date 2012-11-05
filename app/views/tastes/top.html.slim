@@ -1,0 +1,9 @@
+- @title = "Вкусы - TOP 12"
+- @subnav_title = "TOP-12"
+- @subnav = subnav(:tastes)
+
+h2#tastes-header Вкусы Tutti Frutti
+p ТОП-12 – это те вкусы, которые сейчас люди хотят попробовать больше всего.
+#tastes-container.row = render @tastes, show_votes: true
+#taste-modal class="modal hide fade in" tabindex="-1": .modal-body
+#vote-results

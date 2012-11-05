@@ -1,0 +1,31 @@
+doctype html
+html.no-js
+  head
+    meta charset="utf-8"
+    title #{@title_pref}Тутти Фрутти Йогурт Мороженое - Tutti Frutti Frozen Yogurt
+    meta name="description" content="Tutti Frutti Frozen Yogurt – это крупнейшая международная сеть кафе, работающая по модели self-serve."
+    meta name="viewport" content="width=device-width"
+
+    = favicon_link_tag "favicon.png"
+    = stylesheet_link_tag "application"
+
+    = javascript_include_tag "http://connect.facebook.net/ru_RU/all.js#xfbml=1"
+    = javascript_include_tag "http://vk.com/js/api/openapi.js?60"
+
+    javascript:
+      VK.init({ apiId: 3195263, onlyWidgets: true });
+
+    = yield :facebook_metatags
+  body
+    /![if lt IE 7]
+      p.chromeframe You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
+    .container
+      #header
+        #tflogo: a href="/"
+        #counter.large-number 584
+        ul#nav = render_menu
+      #document-container = content_for?(:content) ? yield(:content) : yield
+      = render "footer"
+      = render "google-analytics"
+    = javascript_include_tag "application"
+    = yield :scripts

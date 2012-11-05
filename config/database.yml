@@ -1,0 +1,18 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: tutti_development
+  pool: 5
+  username: tycooon
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: tutti_test
+  pool: 5
+  username: tycooon
+  password:
