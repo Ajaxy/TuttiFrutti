@@ -1,11 +1,11 @@
 require "rvm/capistrano"
 require "bundler/capistrano"
-require "sidekiq/capistrano"
 require "capistrano_colors"
 
 load "config/recipes/base"
 load "config/recipes/nginx"
 load "config/recipes/unicorn"
+load "config/recipes/postgresql"
 load "config/recipes/misc"
 
 set :host, "176.58.108.251"
@@ -26,7 +26,7 @@ task :production do
 end
 
 set :user, "root"
-set :deploy_to, "/srv/#{application}"
+set :deploy_to, -> { "/srv/#{application}" }
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
@@ -37,3 +37,5 @@ set :rvm_type, :system
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
+
+set :postgresql_password, "111"
