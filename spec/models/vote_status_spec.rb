@@ -2,8 +2,10 @@
 require "spec_helper"
 
 describe VoteStatus do
+  COOKIE_NAME = VoteStatus::COOKIE_NAME
+
   def create_vs(data = nil)
-    VoteStatus.new("TF_VOTES" => data ? JSON.dump(data) : nil)
+    VoteStatus.new(COOKIE_NAME => data ? JSON.dump(data) : nil)
   end
 
   context "#initialize" do
@@ -42,10 +44,10 @@ describe VoteStatus do
       let(:taste) { stub(code: "a") }
 
       it "should update cookie" do
-        cookies = { "TF_VOTES" => nil }
+        cookies = { COOKIE_NAME => nil }
         vs = VoteStatus.new(cookies)
         vs.vote_for taste.as_null_object
-        cookies["TF_VOTES"].should == JSON.dump(Votes: ["a"])
+        cookies[COOKIE_NAME].should == JSON.dump(Votes: ["a"])
       end
 
       it "should add vote to taste" do
@@ -63,10 +65,10 @@ describe VoteStatus do
     end
 
     it "should update cookie" do
-      cookies = { "TF_VOTES" => JSON.dump(Votes: ["a"]) }
+      cookies = { COOKIE_NAME => JSON.dump(Votes: ["a"]) }
       vs = VoteStatus.new(cookies)
       vs.unvote_for taste.as_null_object
-      cookies["TF_VOTES"].should == JSON.dump(Votes: [])
+      cookies[COOKIE_NAME].should == JSON.dump(Votes: [])
     end
 
     it "should remove vote from taste" do

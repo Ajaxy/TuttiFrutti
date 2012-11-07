@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class VoteStatus
-  COOKIE_NAME = "TF_VOTES"
+  COOKIE_NAME = "TF_VOTE"
   MAX_VOTES_FROM_PERSON = 99
 
   attr_reader :votes, :cookies
