@@ -1,4 +1,6 @@
 #### Подготовка
+Прежде всего нужно настроить ssh-ключи как сказано описано [здесь](https://help.github.com/articles/generating-ssh-keys).
+
 ```
 git clone git@github.com:AndreyM/TuttiFrutti.git
 cd TuttiFrutti
@@ -8,7 +10,6 @@ bundle
 
 #### Генерация ключей
 ```
-ssh-keygen # Выполнить только если нет файла ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub | ssh root@176.58.108.251 'cat >> ~/.ssh/authorized_keys'
 ssh-add -K
 ```
