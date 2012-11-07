@@ -4,14 +4,14 @@ require "spec_helper"
 describe Taste do
   let(:taste) { Taste.create! code: "Foo" }
 
-  context "#add_vote" do
+  describe "#add_vote" do
     it "increments votes field" do
       taste.add_vote
       taste.reload.votes.should == 1
     end
   end
 
-  context "#remove_vote" do
+  describe "#remove_vote" do
     it "does nothing if votes == 0" do
       taste.remove_vote
       taste.reload.votes.should == 0

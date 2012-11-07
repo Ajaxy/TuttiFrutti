@@ -8,7 +8,7 @@ describe VoteStatus do
     VoteStatus.new(COOKIE_NAME => data ? JSON.dump(data) : nil)
   end
 
-  context "#initialize" do
+  describe "#initialize" do
     it "loads votes from cookie" do
       vs = create_vs(Votes: %w[a b c])
       vs.votes.should == %w[a b c]
@@ -20,14 +20,14 @@ describe VoteStatus do
     end
   end
 
-  context "#voted_for?" do
+  describe "#voted_for?" do
     let(:vs) { create_vs(Votes: %w[a b c]) }
 
     it { vs.voted_for?(stub code: "a").should be_true }
     it { vs.voted_for?(stub code: "z").should_not be_true }
   end
 
-  context "#vote_for" do
+  describe "#vote_for" do
     context "now allow" do
       it "should not allow if too much votes" do
         vs = create_vs(Votes: ["a"] * 100)
@@ -57,7 +57,7 @@ describe VoteStatus do
     end
   end
 
-  context "#unvote_for" do
+  describe "#unvote_for" do
     let(:taste) { stub(code: "a") }
 
     it "should not allow unless voted" do
