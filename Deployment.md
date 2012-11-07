@@ -1,6 +1,11 @@
 #### Чтобы развернуть приложение на сервере (на нем уже должны стоять нужные пакеты)
 ```
-ssh-add ~/.ssh/id_rsa – нужно сделать на маке, чтобы заработал Agent Forwarding
+ssh-keygen # если еще нет файла ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub | ssh root@176.58.108.251 'cat >> ~/.ssh/authorized_keys'
+ssh-add -K
+```
+
+```
 cap staging deploy:setup
 cap staging deploy:cold deploy:seed
 ```
