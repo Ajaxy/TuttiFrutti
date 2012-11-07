@@ -8,7 +8,7 @@ brew install postgresql
 bundle
 ```
 
-#### Генерация ключей
+#### Добавляем свой публичный ключ на сервер в ~/.ssh/authorized_keys
 ```
 cat ~/.ssh/id_rsa.pub | ssh root@176.58.108.251 'cat >> ~/.ssh/authorized_keys'
 ssh-add -K
