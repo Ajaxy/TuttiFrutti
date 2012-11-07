@@ -34,8 +34,4 @@ set :scm, "git"
 set :repository, "git@github.com:AndreyM/TuttiFrutti.git"
 
 set :rvm_type, :system
-
-default_run_options[:pty] = true
-ssh_options[:forward_agent] = true
-
 set :postgresql_password, "111"
