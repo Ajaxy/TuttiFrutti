@@ -27,6 +27,6 @@ cap staging deploy
 
 
 #### Production
-- Профиль production деплоится с ветки deploy.
+- Профиль production деплоится с ветки deploy (получить ветку в первый раз `git checkout --track origin/deploy`)
 - Команды все те же что для staging, только заменить staging на production.
 
