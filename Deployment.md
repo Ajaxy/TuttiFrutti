@@ -1,5 +1,5 @@
 #### Подготовка
-Прежде всего нужно настроить ssh-ключи как сказано описано [здесь](https://help.github.com/articles/generating-ssh-keys).
+Прежде всего нужно настроить ssh-ключи как описано [здесь](https://help.github.com/articles/generating-ssh-keys).
 
 ```
 git clone git@github.com:AndreyM/TuttiFrutti.git
@@ -25,4 +25,8 @@ cap staging deploy:cold deploy:seed
 cap staging deploy
 ```
 
-Для работы с production сервером все то же, только заменить staging на production.
+
+#### Production
+- Профиль production деплоится с ветки deploy.
+- Команды все те же что для staging, только заменить staging на production.
+
