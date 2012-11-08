@@ -4,4 +4,4 @@ jQuery ->
     changeMonth:  true
     changeYear:   true
     yearRange:    "1910:2000"
-    defaultDate:  "-30y"
+    defaultDate:  "-20y"
