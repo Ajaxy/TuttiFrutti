@@ -1,0 +1,33 @@
+- @title = "Карьера - Сотрудник кафе - "
+- @subnav_title = "Сотрудник"
+- @subnav = subnav(:career)
+
+h2#career-manager-header Сотрудник кафе
+
+h4 Условия:
+
+p График работы: 5/2, плавающие выходные.<br/>
+  Оформление по ТК РФ;<br/>
+  Зарплата обсуждается на собеседовании, белая<br/>
+  Месторасположение кафе: пересечение Дмитровского шоссе и МКАД<br/>
+
+h4 Тип занятости
+p Полная занятость, полный день<br/>
+  Желательно указать в резюме ожидания по зарплате.
+
+.feedback-form
+  h2 Откликнуться на вакансию
+  = simple_form_for (@response || Response.new), url: "", html: { class: "form" } do |f|
+    .form-inputs
+      = f.input :first_name, label: "Имя"
+      = f.input :last_name, label: "Фамилия"
+      = f.input :birth_date, label: "Дата рождения"
+      = f.input :work_permit, as: :radio_buttons, label: "Разрешение на работу в РФ"
+      = f.input :phone, label: "Телефон"
+      = f.input :start_date, label: "Когда сможете приступить к работе?"
+      = f.input :info_source, label: "Откуда вы узнали о вакансии?"
+      = f.input :covering_letter, as: :text, label: "Короткое сопроводительное письмо"
+    .form-actions
+      = f.submit "Отправить отклик", class: "btn"
+
+#career-contact

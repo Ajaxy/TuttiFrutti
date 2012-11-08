@@ -9,6 +9,7 @@ gem "capistrano_colors"
 
 gem "jquery-rails"
 gem "pry-rails"
+gem "simple_form"
 gem "slim"
 gem "unicorn"
 
@@ -21,5 +22,10 @@ end
 
 group :development, :test do
   gem "capybara"
+  gem "letter_opener"
   gem "rspec-rails"
+end
+
+group :production do
+  gem "exception_notification"
 end
