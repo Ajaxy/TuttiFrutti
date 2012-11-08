@@ -186,11 +186,14 @@ ul.social {
 
   .form {
     margin: 0 auto;
-    width: 370px;
+    width: 500px;
     abbr { color: #d2002e; border: 0; }
     textarea { height: 160px; }
 
     .help-inline { font-size: 12px; margin-top: -3px; }
+    select.date { width: 100px; }
+    label.radio { display: inline-block; margin-right: 15px; }
+    input.string, textarea.text { width: 100%; }
   }
 
 }

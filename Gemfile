@@ -9,6 +9,7 @@ gem "capistrano_colors"
 
 gem "jquery-rails"
 gem "pry-rails"
+gem "russian"
 gem "simple_form"
 gem "slim"
 gem "unicorn"

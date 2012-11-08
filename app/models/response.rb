@@ -11,7 +11,10 @@ class Response
   validates_presence_of :first_name, :last_name, :birth_date, :phone, :work_permit,
                         :message => "Поле не может быть пустым"
 
-  def initialize(params={})
+  def initialize(params = {})
+    values = (1..3).map { |i| params.delete("birth_date(#{i}i)").to_i }
+    self.birth_date = Date.civil(*values) rescue nil
+
     params.each do |attr, value|
       self.public_send("#{attr}=", value)
     end if params

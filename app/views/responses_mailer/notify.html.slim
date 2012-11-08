@@ -1,7 +1,7 @@
 p Новый отклик на позицию «#{@position}»
 
 p Имя: #{@response.first_name} #{@response.last_name}
-p Дата рождения: #{@response.birth_date}
+p Дата рождения: #{localize @response.birth_date}
 p Телефон: #{@response.phone}
 p Разрешение на работу в РФ: #{@response.birth_date ? "Есть" : "Нет"}
 
