@@ -18,6 +18,7 @@ p Полная занятость, полный день<br/>
 .feedback-form
   h2 Откликнуться на вакансию
   = simple_form_for (@response || Response.new), url: "", html: { class: "form" } do |f|
+    = f.error_notification
     .form-inputs
       = f.input :first_name, label: "Имя"
       = f.input :last_name, label: "Фамилия"
