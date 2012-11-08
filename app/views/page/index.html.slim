@@ -13,11 +13,12 @@
     VK.Widgets.Like("vk_like", { type: "button", height: 20 });
 
 #social
+  a href="https://www.facebook.com/TuttiFruttiRussia" target="_blank" alt="Наша страничка на фейсбуке" = image_tag "fb_icon.png"
+  a href="http://vk.com/tuttifruttirussia" target="_blank" alt="Наша страничка Вконтакте" = image_tag "vk_icon.png"
   ul.social
-    li
-      .fb-like data-href="https://www.facebook.com/TuttiFruttiRussia" data-layout="button_count" data-send="false" data-show-faces="false" data-width="450"
-    li
-      #vk_like
+    li: .fb-like data-href="https://www.facebook.com/TuttiFruttiRussia" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"
+    li: #vk_like
+
 #splash-container
   #splash
     #logo
