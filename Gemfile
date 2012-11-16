@@ -23,3 +23,7 @@ group :development, :test do
   gem "capybara"
   gem "rspec-rails"
 end
+
+group :production do
+  gem "exception_notification"
+end
