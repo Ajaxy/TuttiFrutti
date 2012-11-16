@@ -69,6 +69,6 @@ Tutti::Application.configure do
   config.action_mailer.delivery_method     = :sendmail
 
   config.middleware.use ExceptionNotifier,
-    sender_address:        "error@hanta.ru",
+    sender_address:        "error@tuttifruttirussia.com",
     exception_recipients:  "tycooon@yandex.ru"
 end
