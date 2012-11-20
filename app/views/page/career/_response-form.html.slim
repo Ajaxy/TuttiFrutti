@@ -1,0 +1,16 @@
+.feedback-form
+  h2 Откликнуться на вакансию
+  - @response ||= Response.new(birth_date: 20.years.ago.beginning_of_year)
+  = simple_form_for @response, url: "", html: { class: "form" },
+                               wrapper: :inline do |f|
+    .form-inputs
+      = f.input :first_name, placeholder: "Имя*"
+      = f.input :last_name, placeholder: "Фамилия*"
+      = f.input :birth_date, hint: "Дата рождения* : ", as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12
+      = f.input :work_permit, as: :radio_buttons, hint: "Разрешение на работу в РФ*: "
+      = f.input :phone, placeholder: "Телефон*"
+      = f.input :start_date, placeholder: "Когда сможете приступить к работе?"
+      = f.input :info_source, placeholder: "Откуда вы узнали о вакансии?"
+      = f.input :covering_letter, as: :text, placeholder: "Короткое сопроводительное письмо"
+    .form-actions
+      = f.submit "Отправить отклик", class: "btn"

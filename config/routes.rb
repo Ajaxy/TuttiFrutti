@@ -1,8 +1,9 @@
 Tutti::Application.routes.draw do
   root to: "page#index"
 
-  get "/about"          => "page#about", as: :about
-  get "/career/(:page)" => "page#career", as: :career
+  get "/about"            => "page#about", as: :about
+  get "/career/(:page)"   => "page#career", as: :career
+  post "/career/(:page)"  => "responses#create", as: :career
 
   scope "/tastes" do
     get "/"           => "tastes#index", as: :tastes
