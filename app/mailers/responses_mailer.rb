@@ -8,7 +8,7 @@ class ResponsesMailer < ActionMailer::Base
     @response = response
     @position = SUBPAGES[:career][response.position]
 
-    mail to:      "tycooon@yandex.ru",
+    mail to:      "ttorzhkova@tfmoscow.com",
          subject: "Новое сообщение с сайта TuttiFruttiRussia"
   end
 end

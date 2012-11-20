@@ -8,8 +8,8 @@ class Response
                 :work_permit, :phone, :start_date, :info_source,
                 :covering_letter
 
-  validates_presence_of :first_name, :last_name, :birth_date, :phone, :work_permit,
-                        :message => "Поле не может быть пустым"
+  validates_presence_of :first_name, :last_name, :birth_date, :phone,
+                        :work_permit, :message => "Поле не может быть пустым"
 
   def initialize(params = {})
     values = (1..3).map { |i| params.delete("birth_date(#{i}i)").to_i }

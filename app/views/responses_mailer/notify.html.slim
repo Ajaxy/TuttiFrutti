@@ -3,7 +3,7 @@ p Новый отклик на позицию «#{@position}»
 p Имя: #{@response.first_name} #{@response.last_name}
 p Дата рождения: #{localize @response.birth_date}
 p Телефон: #{@response.phone}
-p Разрешение на работу в РФ: #{@response.birth_date ? "Есть" : "Нет"}
+p Разрешение на работу в РФ: #{@response.work_permit == "false" ? "Нет" : "Есть"}
 
 - if @response.info_source.present?
   p Откуда вы узнали о вакансии: #{@response.info_source}

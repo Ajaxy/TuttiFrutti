@@ -1,3 +1,5 @@
+@import "bootstrap_and_overrides";
+
 body { color: #6d6e67; }
 address { margin: 0 !important; }
 input, textarea { width: 350px; }
@@ -168,7 +170,8 @@ ul.social {
 
 #career-header { margin: 30px 0 0 230px; background: url(career-header.png) no-repeat; width: 166px; height: 55px; overflow: hidden; text-indent: -9999px; }
 #career-manager-header { margin-left: 125px; background: url(careers/manager-header.png) no-repeat; width: 383px; height: 54px; overflow: hidden; text-indent: -9999px; }
-#career-economist-header { margin-left: 175px; background: url(careers/economist-header.png) no-repeat; width: 214px; height: 46px; overflow: hidden; text-indent: -9999px; }
+#career-worker-header { margin-left: 175px; background: url(careers/worker-header.png) no-repeat; width: 318px; height: 64px; overflow: hidden; text-indent: -9999px; }
+#career-foreman-header { margin-left: 175px; background: url(careers/foreman-header.png) no-repeat; width: 310px; height: 65px; overflow: hidden; text-indent: -9999px; }
 #career-search-header { margin-left: 250px; background: url(career-search-header.png) no-repeat; width: 93px; height: 26px; overflow: hidden; text-indent: -9999px; }
 #career-search-list { font-size: 16px; margin: 0 0 20px 20px; }
 
@@ -180,20 +183,35 @@ ul.social {
   background-color: WhiteSmoke;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
   padding: 15px;
-  margin-top: 25px;
+  margin-top: 40px;
 
-  h2 { text-align: center; }
+  h2 { text-align: center; margin: 0; }
 
   .form {
     margin: 0 auto;
     width: 500px;
-    abbr { color: #d2002e; border: 0; }
-    textarea { height: 160px; }
+    /*abbr { color: #d2002e; border: 0; }*/
+    textarea { height: 120px; }
 
-    .help-inline { font-size: 12px; margin-top: -3px; }
+    /*.help-inline { font-size: 12px; margin-top: -3px; }*/
     select.date { width: 100px; }
     label.radio { display: inline-block; margin-right: 15px; }
     input.string, textarea.text { width: 100%; }
+    span.hint { color: #888; display: inline-block; margin-right: 1em; }
+
+    input[type=text], input[type=tel], select, textarea { margin: 0; }
+
+    .control-group {
+      display: table;
+      width: 100%;
+      height: 40px;
+      margin: 5px 0;
+      .controls { display: table-cell; vertical-align: middle; }
+    }
+
+    .error {
+      .hint { color: $errorText }
+    }
   }
 
 }
