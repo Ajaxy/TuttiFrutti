@@ -21,8 +21,8 @@ html.no-js
       p.chromeframe You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
     .container
       #header
-        #tflogo: a href="/"
-        #counter.large-number 584
+        a#tflogo href="/"
+        #counter.large-number 595
         ul#nav = render_menu
       #document-container = content_for?(:content) ? yield(:content) : yield
       = render "footer"

@@ -14,13 +14,6 @@ ul.text li { margin-bottom: 7px; }
   .large-number { font-size: 45px; color: #b2bb1c; font-weight: bold; }
 }
 
-#social { position: absolute; top: 160px; left: 330px; width: 600px; }
-
-ul.social {
-  list-style: none; margin: 0 0 0 10px; display: inline-block;
-  li { list-style: none; display: inline-block; width: 150px; height: 25px; vertical-align: middle; }
-}
-
 #footer { background: url(footer.png) no-repeat bottom; min-height: 380px; margin-bottom: 30px;
   ul { list-style: none; position: absolute; bottom: 70px; left: 180px; background: #fff; border-radius: 20px; padding: 0 15px;
     li { list-style: none; float: left; margin: 5px 10px; }
@@ -30,7 +23,9 @@ ul.social {
   #address { font-size: 12px; position: absolute; bottom: 15px; width: 100%; line-height: 14px; }
 }
 
-#nav { position: absolute; top: 195px; right: 30px; text-indent: 0; margin: 0; list-style: none;
+#social { position: absolute; top: 183px; left: 111px; }
+
+#nav { position: absolute; top: 190px; left: 228px; text-indent: 0; margin: 0; list-style: none;
   li { float: left; list-style: none; margin: 0 10px; }
   a { color: #58585a; text-transform: uppercase; font-size: 14px; }
 }
@@ -59,8 +54,12 @@ ul.social {
   #dot-2 { background: url(logo.png) no-repeat -40px -192px; width: 40px; height: 40px; position: absolute; left: 615px; display: none; }
 }
 #tflogo {
-  left: 57px; top: 30px; position: absolute;
-  a { display: block; height: 174px; width: 168px; }
+  position: absolute;
+  width: 168px;
+  height: 174px;
+  left: 57px;
+  top: 0px;
+  background: url(header-logo.png) no-repeat;
 }
 
 #self-serve-preview { background: url(self-serve-preview.png) no-repeat; width: 350px; height: 300px; position: absolute; right: 22px; top: 231px; z-index: 3;}

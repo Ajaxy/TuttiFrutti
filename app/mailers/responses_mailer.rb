@@ -12,3 +12,4 @@ class ResponsesMailer < ActionMailer::Base
          subject: "Новое сообщение с сайта TuttiFruttiRussia"
   end
 end
+
