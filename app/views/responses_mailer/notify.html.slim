@@ -1,10 +1,12 @@
 p Новый отклик на позицию «#{@position}»
 
-p Имя: #{@response.first_name} #{@response.last_name}
+p Имя: #{@name}
 p Дата рождения: #{localize @response.birth_date}
 p Телефон: #{@response.phone}
 p Разрешение на работу в РФ: #{@response.work_permit == "false" ? "Нет" : "Есть"}
 
+- if @response.start_date.present?
+  p Когда сможете приступить к работе: #{@response.start_date}
 - if @response.info_source.present?
   p Откуда вы узнали о вакансии: #{@response.info_source}
 - if @response.covering_letter.present?

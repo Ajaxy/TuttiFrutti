@@ -6,10 +6,12 @@ class ResponsesMailer < ActionMailer::Base
 
   def notify(response)
     @response = response
+
     @position = SUBPAGES[:career][response.position]
+    @name     = "#{@response.first_name} #{@response.last_name}"
 
     mail to:      "career@tuttifruttirussia.com",
          bcc:     "tycooon@yandex.ru",
-         subject: "Новое сообщение с сайта TuttiFruttiRussia"
+         subject: "Отклик на вакансию «#{@position}» — #{@name}"
   end
 end
