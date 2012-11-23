@@ -24,6 +24,9 @@ ul.text li { margin-bottom: 7px; }
 }
 
 #social { position: absolute; top: 183px; left: 111px; }
+ul.social { list-style: none; margin: 0 0 0 10px; display: inline-block;
+  li { list-style: none; display: inline-block; width: 150px; height: 25px; vertical-align: middle; }
+}
 
 #nav { position: absolute; top: 190px; left: 228px; text-indent: 0; margin: 0; list-style: none;
   li { float: left; list-style: none; margin: 0 10px; }
