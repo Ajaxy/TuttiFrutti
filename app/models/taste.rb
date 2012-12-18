@@ -1,5 +1,7 @@
+# encoding: utf-8
+
 class Taste < ActiveRecord::Base
-  attr_accessible :code, :color, :fruits, :liquid, :name, :topings, :votes, :yogurt
+  # has_many :votes
 
   def self.top(max)
     order("votes DESC").limit(max.present? ? max.to_i : 12)

@@ -8,6 +8,8 @@ gem "rvm-capistrano"
 gem "capistrano_colors"
 
 gem "jquery-rails"
+gem "omniauth-facebook"
+gem "omniauth-vkontakte"
 gem "pry-rails"
 gem "russian"
 gem "simple_form"

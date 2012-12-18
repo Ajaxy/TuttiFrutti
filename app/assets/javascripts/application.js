@@ -6,4 +6,3 @@
 //= require modernizr.min
 
 //= require main
-//= require responses

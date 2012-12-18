@@ -1,54 +1,47 @@
 # encoding: utf-8
 
 class VoteStatus
-  COOKIE_NAME = "TF_VOTE"
   MAX_VOTES_FROM_PERSON = 99
 
-  attr_reader :votes, :cookies
+  attr_reader :votes, :user
 
-  def initialize(cookies)
-    @cookies  = cookies
-    data      = load_json(cookies[COOKIE_NAME])
-    @votes    = data["Votes"] || []
+  def initialize(user)
+    @user  = user
+    @votes = user.votes if user
   end
 
   def voted_for?(taste)
-    taste.code.in?(votes)
+    return false unless user
+    taste.code.in?(vote_codes)
   end
 
   def vote_for(taste)
     return false if !can_vote? || voted_for?(taste)
+    user.votes << Vote.new(taste: taste)
+    user.save!
     taste.add_vote
-    votes << taste.code
-    update_cookie
     true
   end
 
   def unvote_for(taste)
     return false unless voted_for?(taste)
+    user.votes.find { |vote| vote.taste == taste }.destroy
+    user.votes(true)
     taste.remove_vote
-    votes.delete(taste.code)
-    update_cookie
     true
   end
 
   def as_json(*)
-    {
-      Votes: votes,
-    }
+    { Votes: vote_codes }
   end
 
   private
 
   def can_vote?
-    votes.size < MAX_VOTES_FROM_PERSON
+    user && votes.size < MAX_VOTES_FROM_PERSON
   end
 
-  def load_json(source)
-    JSON.parse(source) rescue {}
-  end
-
-  def update_cookie
-    cookies[COOKIE_NAME] = JSON.dump(as_json)
+  def vote_codes
+    votes ? votes.map { |vote| vote.taste.code } : []
   end
 end

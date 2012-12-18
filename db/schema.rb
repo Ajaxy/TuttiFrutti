@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105110317) do
+ActiveRecord::Schema.define(:version => 20121218142452) do
 
   create_table "tastes", :force => true do |t|
     t.string   "code"
@@ -28,5 +28,22 @@ ActiveRecord::Schema.define(:version => 20121105110317) do
 
   add_index "tastes", ["code"], :name => "index_tastes_on_code", :unique => true
   add_index "tastes", ["votes"], :name => "index_tastes_on_votes"
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "votes", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "taste_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "votes", ["taste_id"], :name => "index_votes_on_taste_id"
+  add_index "votes", ["user_id"], :name => "index_votes_on_user_id"
 
 end

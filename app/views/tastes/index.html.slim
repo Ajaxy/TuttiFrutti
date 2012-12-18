@@ -22,10 +22,14 @@ h2#tastes-header Вкусы Tutti Frutti
   p Если вас заинтересовал вкус - откройте его в большом окне и нажмите кнопку “Мне нравится”.
   p Выберите вкусы, которые вам по душе. Поделитесь своим выбором с друзьями. Или сравните, насколько ваш вкус совпадает со вкусом других людей в нашем TOP 12.
 #vote-results
-  ' Вы выбрали
-  span.large-number 0
-  '
-  span#taste-ending вкусов
+  - if current_user
+    ' Вы выбрали
+    span.large-number 0
+    '
+    span#taste-ending вкусов
+  - else
+    p = link_to "Войти через VK", "/auth/vkontakte"
+    p = link_to "Войти через FB", "/auth/facebook"
   ul.social
     li
       .fb-like data-action="recommend" data-href="http://tuttifruttirussia.com/tastes/" data-layout="button_count" data-send="false" data-show-faces="true" data-width="150"
