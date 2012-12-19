@@ -19,3 +19,20 @@ bundle
 rake db:create:all db:migrate db:seed
 unicorn
 ```
+
+
+Установка под Ubuntu/Linux
+------------------------
+
+### Установка PostgreSQL
+[Инструкция на сайте PostgreSQL](https://help.ubuntu.com/community/PostgreSQL)
+
+```
+sudo apt-get install postgresql
+sudo -u postgres createuser --superuser [$USER]
+sudo -u postgres psql
+postgres=# \password [$USER]
+createdb $USER
+```
+
+Настройка и запуск аналогично
