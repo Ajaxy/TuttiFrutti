@@ -32,7 +32,8 @@ sudo apt-get install postgresql
 sudo -u postgres createuser --superuser [$USER]
 sudo -u postgres psql
 postgres=# \password [$USER]
-createdb $USER
 ```
+`[$USER]` - имя нового пользователя
+
 
 Настройка и запуск аналогично
