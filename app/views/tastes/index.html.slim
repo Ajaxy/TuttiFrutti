@@ -23,6 +23,7 @@ h2#tastes-header Вкусы Tutti Frutti
   p Выберите вкусы, которые вам по душе. Поделитесь своим выбором с друзьями. Или сравните, насколько ваш вкус совпадает со вкусом других людей в нашем TOP 12.
 #vote-results
   - if current_user
+    p = link_to "Выйти", "signout"
     ' Вы выбрали
     span.large-number 0
     '
