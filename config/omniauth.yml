@@ -1,0 +1,21 @@
+development:
+  vkontakte:
+    app_id: 3311082
+    secret: QaNTqvRLNaycYCw0NMJG
+  facebook:
+    app_id: 322346714548331
+    secret: 2f4e79066b88dc772e46baa74273fa15
+test:
+  vkontakte:
+    app_id: 3311082
+    secret: QaNTqvRLNaycYCw0NMJG
+  facebook:
+    app_id: 322346714548331
+    secret: 2f4e79066b88dc772e46baa74273fa15
+production:
+  vkontakte:
+    app_id: 3304189
+    secret: EaR3uNBqo1f7QXpdps7X
+  facebook:
+    app_id: 317434528372827
+    secret: 4c13d36e4f7fe07ca373c40e64953ba8
