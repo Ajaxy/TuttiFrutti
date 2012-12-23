@@ -1,0 +1,6 @@
+- content_for :scripts do
+  javascript:
+    if(window.opener) {
+      window.opener.location.reload(true);
+      window.close()
+    }

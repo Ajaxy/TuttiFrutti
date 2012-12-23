@@ -24,7 +24,7 @@ ul.text li { margin-bottom: 7px; }
 }
 
 #social { position: absolute; top: 183px; left: 111px; }
-ul.social { list-style: none; margin: 0 0 0 10px; display: inline-block;
+ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   li { list-style: none; display: inline-block; width: 150px; height: 25px; vertical-align: middle; }
 }
 
@@ -216,4 +216,33 @@ ul.social { list-style: none; margin: 0 0 0 10px; display: inline-block;
     }
   }
 
+}
+
+.login-info{
+  padding: 10px 0 5px;
+}
+
+.login-button{
+  float: left;
+  padding-right: 20px;
+  &>a {
+    float: left;
+    height: 22px;
+    cursor: pointer;
+    display: block;
+    padding: 5px 10px 5px 35px;
+
+    &, &:hover, &:active {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.fb-login{
+  background: #496499 url(fb-login.png) no-repeat -3px 0;
+}
+
+.vk-login{
+  background: #2b587a url(vk-login.png) no-repeat 0 -1px;
 }

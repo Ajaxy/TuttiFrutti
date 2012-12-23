@@ -6,6 +6,19 @@
   javascript:
     VK.Widgets.Like("vk_like", { type: "button" });
 
+    var popupCenter = function(url, width, height, name) {
+      var left, top;
+      left = (screen.width / 2) - (width / 2);
+      top = (screen.height / 2) - (height / 2);
+      return window.open(url, name, "menubar=no,toolbar=no,status=no,width=" + width + ",height=" + height + ",toolbar=no,left=" + left + ",top=" + top);
+    };
+
+    $("a.popup").click(function(e) {
+      popupCenter($(this).attr("href"), $(this).attr("data-width"), $(this).attr("data-height"), "authPopup");
+      e.stopPropagation();
+      return false;
+    });
+
 - content_for :facebook_metatags do
   meta content="Website" property="og:type"
   meta content="http://tuttifruttirussia.com/tastes/" property="og:url"
@@ -15,22 +28,20 @@
   meta content="Выбери свои 12 вкусов Тутти Фрутти!" property="og:description"
   meta content="284364358347355" property="fb:app_id"
 
+
 h2#tastes-header Вкусы Tutti Frutti
 #tastes-intro
   p Мы очень хотим, чтобы вам у нас понравилось.
   p Поэтому предлагаем вам самим выбирать вкусы для кафе Tutti Frutti в России. В разных странах у людей разные предпочтения, в Америке любят арахисовое масло, а в Азии экзотические фрукты. А что хотели бы попробовать вы?
   p Если вас заинтересовал вкус - откройте его в большом окне и нажмите кнопку “Мне нравится”.
   p Выберите вкусы, которые вам по душе. Поделитесь своим выбором с друзьями. Или сравните, насколько ваш вкус совпадает со вкусом других людей в нашем TOP 12.
-#vote-results
-  - if current_user
-    p = link_to "Выйти", "signout"
+- if current_user
+  #vote-results
     ' Вы выбрали
     span.large-number 0
     '
     span#taste-ending вкусов
-  - else
-    p = link_to "Войти через VK", "/auth/vkontakte"
-    p = link_to "Войти через FB", "/auth/facebook"
+    div.clearfix
   ul.social
     li
       .fb-like data-action="recommend" data-href="http://tuttifruttirussia.com/tastes/" data-layout="button_count" data-send="false" data-show-faces="true" data-width="150"
@@ -38,6 +49,11 @@ h2#tastes-header Вкусы Tutti Frutti
       #vk_like
   .fb-like-container
   .vk-like-container
+- else
+  p.login-info Чтобы проголосовать, войдите с помощью аккаунта в Facebook или Вконтакте
+  p.login-button = link_to "Войти помощью Вконтакте", "/auth/vkontakte", :class => 'vk-login popup', :data => {:width => 600, :height => 400}
+  p.login-button = link_to "Войти с помощью Facebook", "/auth/facebook", :class => 'fb-login popup', :data => {:width => 600, :height => 400}
+  div.clearfix
 #fruits-top12
 #tastes-container.row = render @tastes, show_votes: false
 #taste-modal.modal.hide.fade.in tabindex="-1"
