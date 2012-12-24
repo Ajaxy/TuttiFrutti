@@ -215,34 +215,54 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
       .hint { color: $errorText }
     }
   }
-
 }
 
-.login-info{
-  padding: 10px 0 5px;
+.vk-button, .fb-button {
+  font-size: 12px;
+  color: white;
+  display: block;
+  padding: 4px 14px;
+  text-shadow: 0px 1px 0px #45688E;
+  margin: 0 10px 0 0;
+
+  &:hover { 
+    color: white; 
+    text-decoration: none; 
+  }
 }
 
-.login-button{
-  float: left;
-  padding-right: 20px;
-  &>a {
+.vk-button {
+  border: 1px solid #3B6798;
+  border-top-color: #7E9CBC;
+  border-left-color: #7E9CBC;
+  background-color: #6D8FB3;
+
+  &:hover { 
+    background-color: #84a1bf;
+  }
+}
+
+.fb-button {
+  background-color: #5B74A8;
+  border: 1px solid #1A356E;
+  border-top-color: #29447E;
+  border-left-color: #29447E;
+
+  &:hover { 
+    background-color: #84a1bf;
+  }
+}
+
+.login-container {
+  background: whiteSmoke;
+  padding: 15px;
+  ul { margin: 0; }
+  ul li { 
     float: left;
-    height: 22px;
-    cursor: pointer;
-    display: block;
-    padding: 5px 10px 5px 35px;
-
-    &, &:hover, &:active {
-      color: #fff;
-      text-decoration: none;
-    }
+    list-style: none;
   }
 }
 
 .fb-login{
   background: #496499 url(fb-login.png) no-repeat -3px 0;
-}
-
-.vk-login{
-  background: #2b587a url(vk-login.png) no-repeat 0 -1px;
 }
