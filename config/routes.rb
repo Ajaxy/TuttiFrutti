@@ -17,6 +17,6 @@ Tutti::Application.routes.draw do
   delete "/api/vote"  => "votes#destroy"
 
   get "auth/:provider/callback", to: "sessions#create"
-  get "auth/failure", to: redirect("/")
+  get "auth/failure", to: "sessions#failure"
   get "signout", to: "sessions#destroy", as: "signout"
 end

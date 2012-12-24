@@ -225,9 +225,9 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   text-shadow: 0px 1px 0px #45688E;
   margin: 0 10px 0 0;
 
-  &:hover { 
-    color: white; 
-    text-decoration: none; 
+  &:hover {
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -237,7 +237,7 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   border-left-color: #7E9CBC;
   background-color: #6D8FB3;
 
-  &:hover { 
+  &:hover {
     background-color: #84a1bf;
   }
 }
@@ -248,7 +248,7 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   border-top-color: #29447E;
   border-left-color: #29447E;
 
-  &:hover { 
+  &:hover {
     background-color: #84a1bf;
   }
 }
@@ -257,7 +257,7 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   background: whiteSmoke;
   padding: 15px;
   ul { margin: 0; }
-  ul li { 
+  ul li {
     float: left;
     list-style: none;
   }
@@ -265,4 +265,8 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
 
 .fb-login{
   background: #496499 url(fb-login.png) no-repeat -3px 0;
+}
+
+.login-error-container {
+  padding: 20px;
 }
