@@ -14,8 +14,8 @@ test:
     secret: 2f4e79066b88dc772e46baa74273fa15
 production:
   vkontakte:
-    app_id: 3304189
+    app_id: 3201900
     secret: EaR3uNBqo1f7QXpdps7X
   facebook:
-    app_id: 317434528372827
-    secret: 4c13d36e4f7fe07ca373c40e64953ba8
+    app_id: 284364358347355
+    secret: 0d2efa390c2d40faa9a58f2a034b1cd1
