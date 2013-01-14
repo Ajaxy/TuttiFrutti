@@ -21,7 +21,7 @@ end
 desc "Run tasks in production enviroment."
 task :production do
   set :application, "tutti"
-  set :branch, "deploy"
+  set :branch, "master"
   set :nginx_server_names, "tuttifruttirussia.com"
 end
 
