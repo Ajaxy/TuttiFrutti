@@ -87,7 +87,23 @@
 .divider
 #addresses.row
   h2#addresses-header Наши адреса
-  .address-large
-    h3 ТЦ "РИО"
-    address Дмитровское шоссе, 163А, Москва
-    .map = image_tag "map.png"
+  .row
+    .span4
+      h4 ТЦ "РИО"
+      p
+        address Дмитровское шоссе, 163А, Москва
+      a href="#rio-large" data-toggle="modal"
+        = image_tag "maps/rio-small.jpg", alt: "Тутти-фрутти ТЦ РИО, Дмитровское шоссе, Москва", height: 200, width: 300, class: "small-map"
+    .span4.soon
+      h4 Башня "Эволюция", Москва-Сити
+      p Скоро открытие!
+      = image_tag "maps/city-small.jpg", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
+    .span4.soon
+      h4 ТЦ "Июнь", Красногорск
+      p Скоро открытие!
+      = image_tag "maps/june-small.jpg", alt: "Тутти-фрутти ТЦ Июнь, Красногорск", height: 200, width: 300, class: "small-map"
+  #rio-large.modal.hide.fade
+    .large-map
+      h3 ТЦ "РИО"
+      address Дмитровское шоссе, 163А, Москва
+      .map = image_tag "map.png"

@@ -101,12 +101,16 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
 .tasty-healthy-picto.p6 { background-position: 0 -705px; margin-right: 0; }
 
 #ice-cream-vs-tutti-frutti { margin-left: 20px; }
-#addresses { margin: 20px 0 30px 0; }
-#addresses-header { background: image-url("addresses-header.png") no-repeat; width: 122; height: 54px; overflow:hidden; text-indent: -9999px; margin-left: 435px; }
-.address-large { margin: 0 auto; width: 610px; text-align: center;
+#addresses { margin: 20px 0 60px 0; 
+  .soon { opacity: 0.5; }
+  .small-map { width: 300px; height: 200px; border: 1px solid #ccc; box-shadow: 0 0 5px rgba(0,0,0,0.3); }
+
+}
+#addresses-header { background: image-url("addresses-header.png") no-repeat; width: 138px; height: 55px; overflow:hidden; text-indent: -9999px; margin-left: 425px; }
+.large-map { margin: 30px; text-align: center;
   h3 { color: #000; margin-bottom: 0px; }
   address { color: #000; }
-  .map{ border: 1px solid #777; padding: 4px; float: left; margin: 15px 0; box-shadow: 0px 0px 10px rgba(0,0,0,0.3); }
+  .map{ border: 1px solid #ccc; padding: 4px; float: left; margin: 15px 0; }
 }
 
 .divider { background: image-url("divider.png") no-repeat; height: 35px; margin-left: 57px; }
