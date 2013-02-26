@@ -31,7 +31,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@github.com:AndreyM/TuttiFrutti.git"
+set :repository, "git@github.com:mereskin/TuttiFrutti.git"
 
 set :rvm_type, :system
 set :postgresql_password, "111"
