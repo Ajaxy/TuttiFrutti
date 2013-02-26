@@ -27,7 +27,7 @@ end
 
 set :user, "root"
 set :deploy_to, -> { "/srv/#{application}" }
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
