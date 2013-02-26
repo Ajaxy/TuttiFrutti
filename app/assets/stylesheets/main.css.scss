@@ -103,14 +103,59 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
 #ice-cream-vs-tutti-frutti { margin-left: 20px; }
 #addresses { margin: 20px 0 60px 0; 
   .soon { opacity: 0.5; }
-  .small-map { width: 300px; height: 200px; border: 1px solid #ccc; box-shadow: 0 0 5px rgba(0,0,0,0.3); }
+  .address-thumbnail {
+    position: relative;
+    float: left; 
+    width: 190px;
+    margin-right: 5px;
+    font-size: 12px;
 
+    .opening-soon, .already-open { 
+      display: inline-block;
+      border-radius: 3px;
+      padding: 0 3px;
+      font-size: 11px;
+      font-weight: bold;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      border: 1px solid white;
+    }
+
+    .opening-soon { 
+      background: Red; 
+      color: white;       
+      -webkit-transform: rotateZ(-3deg);
+      transform: rotateZ(-3deg);
+    }
+    .already-open { background: Green; color: white; }
+
+    h4 { font-size: 15px; margin-bottom: 0;}
+    .small-map { 
+      width: 185px; 
+      height: 123px; 
+      border: 1px solid #ccc; 
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.5s;
+      transition-property: all;
+      transition-duration: 0.5s;
+      &:hover {
+        -webkit-transform: scale(1.2); 
+        transform: scale(1.2);
+      }
+    }
+
+  }
+  .modal { width: 400px; }
 }
 #addresses-header { background: image-url("addresses-header.png") no-repeat; width: 138px; height: 55px; overflow:hidden; text-indent: -9999px; margin-left: 425px; }
-.large-map { margin: 30px; text-align: center;
+.large-map { 
+  margin: 30px 50px 60px 50px; 
   h3 { color: #000; margin-bottom: 0px; }
   address { color: #000; }
-  .map{ border: 1px solid #ccc; padding: 4px; float: left; margin: 15px 0; }
+  .map{ border: 1px solid #ccc; padding: 4px; margin: 15px 0; }
 }
 
 .divider { background: image-url("divider.png") no-repeat; height: 35px; margin-left: 57px; }

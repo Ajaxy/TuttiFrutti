@@ -88,22 +88,43 @@
 #addresses.row
   h2#addresses-header Наши адреса
   .row
-    .span4
-      h4 ТЦ "РИО"
-      p
-        address Дмитровское шоссе, 163А, Москва
+    .address-thumbnail
       a href="#rio-large" data-toggle="modal"
-        = image_tag "maps/rio-small.jpg", alt: "Тутти-фрутти ТЦ РИО, Дмитровское шоссе, Москва", height: 200, width: 300, class: "small-map"
-    .span4.soon
-      h4 Башня "Эволюция", Москва-Сити
-      p Скоро открытие!
-      = image_tag "maps/city-small.jpg", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
-    .span4.soon
-      h4 ТЦ "Июнь", Красногорск
-      p Скоро открытие!
-      = image_tag "maps/june-small.jpg", alt: "Тутти-фрутти ТЦ Июнь, Красногорск", height: 200, width: 300, class: "small-map"
+        = image_tag "maps/rio-dmitrovskoe-small.png", alt: "Тутти-фрутти ТЦ РИО, Дмитровское шоссе, Москва", class: "small-map"
+      h4 ТЦ "РИО" - Дмитровка
+      p.where На втором этаже, рядом с кинотеатром
+      address Дмитровское шоссе, 163А, Москва
+      p.already-open Уже открыт!
+
+    .address-thumbnail.soon
+      = image_tag "maps/rio-leninsky-small.png", alt: "Тутти-фрутти ТЦ РИО, Ленинский проспект, Москва", class: "small-map"
+      h4 ТРЦ "РИО" - Ленинский
+      p.where В атриуме на первом этаже
+      address Ленинский проспект, вл. 109, Москва
+      p.opening-soon Скоро открытие!
+
+    .address-thumbnail.soon
+      = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
+      h4 Башня "Эволюция"
+      p.where У выхода из метро
+      address Москва-Сити
+      p.opening-soon Скоро открытие!
+
+    .address-thumbnail.soon
+      = image_tag "maps/kaleydoskop-small.png", alt: "Тутти-фрутти ТЦ Калейдоскоп, Химкинский бульвар", height: 200, width: 300, class: "small-map"
+      h4 ТРЦ "Калейдоскоп"
+      p.where На третьем этаже, рядом с кинотеатром
+      address Сходненская, 56, Москва
+      p.opening-soon Скоро открытие!
+
+    .address-thumbnail.soon
+      = image_tag "maps/june-small.png", alt: "Тутти-фрутти ТЦ Июнь, Красногорск", height: 200, width: 300, class: "small-map"
+      h4 ТЦ "Июнь" 
+      address Красногорск
+      p.opening-soon Скоро открытие!
+
   #rio-large.modal.hide.fade
     .large-map
       h3 ТЦ "РИО"
       address Дмитровское шоссе, 163А, Москва
-      .map = image_tag "map.png"
+      .map = image_tag "maps/rio-dmitrovskoe-large.png", alt: "Тутти-фрутти ТЦ РИО, Дмитровское шоссе, Москва"
