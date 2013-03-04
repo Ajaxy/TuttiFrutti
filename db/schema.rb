@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218142452) do
+ActiveRecord::Schema.define(:version => 20130303045149) do
 
   create_table "tastes", :force => true do |t|
     t.string   "code"
@@ -22,8 +22,10 @@ ActiveRecord::Schema.define(:version => 20121218142452) do
     t.string   "liquid"
     t.string   "color"
     t.integer  "votes",      :default => 0
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.integer  "sort_order"
+    t.boolean  "soy",        :default => false
   end
 
   add_index "tastes", ["code"], :name => "index_tastes_on_code", :unique => true

@@ -4,7 +4,8 @@ class TastesController < ApplicationController
   layout "inner"
 
   def index
-    @tastes = Taste.order("id")
+    @tastes = Taste.where(:soy => false).order("sort_order")
+    @soy_tastes = Taste.where(:soy => true).order("sort_order")
   end
 
   def show
@@ -13,7 +14,8 @@ class TastesController < ApplicationController
     if request.xhr?
       render partial: "tastes/large_taste", locals: { taste: @taste }
     else
-      @tastes = Taste.order("id")
+      @tastes = Taste.order("sort_order")
+      @soy_tastes = Taste.where(:soy => 1).order("sort_order")
       render "index"
     end
   end
