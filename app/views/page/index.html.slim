@@ -85,42 +85,43 @@
       .tasty-healthy-img.th4
 #ice-cream-vs-tutti-frutti.row = image_tag "ice-cream-vs-tutti-frutti.png", alt: "Мороженое VS TuttiFrutti", height: 794, width: 945
 .divider
-#addresses.row
+#addresses
   h2#addresses-header Наши адреса
+  h2 Москва
   .row
     .address-thumbnail
       a href="#rio-large" data-toggle="modal"
         = image_tag "maps/rio-dmitrovskoe-small.png", alt: "Тутти-фрутти ТЦ РИО, Дмитровское шоссе, Москва", class: "small-map"
       h4 ТЦ "РИО" - Дмитровка
-      p.where На втором этаже, рядом с кинотеатром
       address Дмитровское шоссе, 163А, Москва
-      p.already-open Уже открыт!
-
-    .address-thumbnail.soon
-      = image_tag "maps/rio-leninsky-small.png", alt: "Тутти-фрутти ТЦ РИО, Ленинский проспект, Москва", class: "small-map"
-      h4 ТРЦ "РИО" - Ленинский
-      p.where В атриуме на первом этаже
-      address Ленинский проспект, вл. 109, Москва
-      p.opening-soon Скоро открытие!
-
-    .address-thumbnail.soon
-      = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
-      h4 Башня "Эволюция"
-      p.where У выхода из метро
-      address Москва-Сити
-      p.opening-soon Скоро открытие!
-
-    .address-thumbnail.soon
-      = image_tag "maps/kaleydoskop-small.png", alt: "Тутти-фрутти ТЦ Калейдоскоп, Химкинский бульвар", height: 200, width: 300, class: "small-map"
-      h4 ТРЦ "Калейдоскоп"
-      p.where На третьем этаже, рядом с кинотеатром
-      address Сходненская, 56, Москва
-      p.opening-soon Скоро открытие!
+      p.where 2 этаж, рядом с кинотеатром
 
     .address-thumbnail.soon
       = image_tag "maps/june-small.png", alt: "Тутти-фрутти ТЦ Июнь, Красногорск", height: 200, width: 300, class: "small-map"
       h4 ТЦ "Июнь" 
       address Красногорск
+      p.where 3 этаж, ресторанный дворик
+      p.opening-soon Скоро открытие!
+
+    .address-thumbnail.soon
+      = image_tag "maps/kaleydoskop-small.png", alt: "Тутти-фрутти ТЦ Калейдоскоп, Химкинский бульвар", height: 200, width: 300, class: "small-map"
+      h4 ТРЦ "Калейдоскоп"
+      address Сходненская, 56, Москва
+      p.where 3 этаж, рядом с кинотеатром
+      p.opening-soon Скоро открытие!
+
+    .address-thumbnail.soon
+      = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
+      h4 Башня "Эволюция"
+      address Москва-Сити
+      p.where У выхода из метро
+      p.opening-soon Скоро открытие!
+
+    .address-thumbnail.soon
+      = image_tag "maps/rio-leninsky-small.png", alt: "Тутти-фрутти ТЦ РИО, Ленинский проспект, Москва", class: "small-map"
+      h4 ТРЦ "РИО" - Ленинский
+      address Ленинский проспект, вл. 109, Москва
+      p.where В атриуме на первом этаже
       p.opening-soon Скоро открытие!
 
   #rio-large.modal.hide.fade

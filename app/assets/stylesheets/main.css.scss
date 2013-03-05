@@ -101,7 +101,7 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
 .tasty-healthy-picto.p6 { background-position: 0 -705px; margin-right: 0; }
 
 #ice-cream-vs-tutti-frutti { margin-left: 20px; }
-#addresses { margin: 20px 0 60px 0; 
+#addresses { margin: 20px -30px 60px 30px; 
   .soon { opacity: 0.5; }
   .address-thumbnail {
     position: relative;
@@ -146,9 +146,8 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
         transform: scale(1.2);
       }
     }
-
   }
-  .modal { width: 400px; }
+  .modal { width: 400px; margin: -250px -200px; }
 }
 #addresses-header { background: image-url("addresses-header.png") no-repeat; width: 138px; height: 55px; overflow:hidden; text-indent: -9999px; margin-left: 425px; }
 .large-map { 
