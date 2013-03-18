@@ -5,7 +5,7 @@ PAGES = {
   "Вкусы Тутти Фрутти"    => :tastes,
   "Карьера"               => :career,
   "Международный сайт"    => "http://tfyogurt.com/",
-  "Контакты"              => "#address",
+  "Контакты"              => "/#address",
 }
 
 SUBPAGES = {
