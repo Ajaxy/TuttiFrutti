@@ -28,7 +28,7 @@ end
 set :user, "root"
 set :deploy_to, -> { "/srv/#{application}" }
 #set :deploy_via, :remote_cache
-set :use_sudo, false
+set :use_sudo, true
 
 set :scm, "git"
 set :repository, "git@github.com:mereskin/TuttiFrutti.git"

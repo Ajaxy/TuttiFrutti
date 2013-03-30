@@ -12,7 +12,7 @@ PAGES = {
 SUBPAGES = {
   career: {
     "manager"   => "Управляющий кафе",
-    "worker"    => "Сотрудник кафе",
+    "worker"    => "Кассир/Сотрудник кафе",
     "foreman"   => "Старший смены",
   },
   tastes: {

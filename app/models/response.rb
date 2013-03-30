@@ -4,7 +4,7 @@ class Response
   include ActiveModel::Validations
   include ActiveModel::Conversion
 
-  attr_accessor :position, :first_name, :last_name, :birth_date,
+  attr_accessor :position, :first_name, :last_name, :location, :birth_date,
                 :work_permit, :phone, :start_date, :info_source,
                 :covering_letter
 
@@ -22,5 +22,9 @@ class Response
 
   def persisted?
     false
+  end
+
+  def self.locations
+    ["ТРЦ РИО, пересечение Дмитровского шоссе и МКАД", "ТРЦ Июнь, Красногорск"]
   end
 end

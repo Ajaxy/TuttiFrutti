@@ -6,6 +6,7 @@
     .form-inputs
       = f.input :first_name, placeholder: "Имя*"
       = f.input :last_name, placeholder: "Фамилия*"
+      = f.input :location, prompt: "Расположение кафе*", collection: Response.locations
       = f.input :birth_date, hint: "Дата рождения* : ", as: :date, start_year: Date.today.year - 90, end_year: Date.today.year - 12
       = f.input :work_permit, as: :radio_buttons, hint: "Разрешение на работу в РФ*: "
       = f.input :phone, placeholder: "Телефон*"

@@ -25,6 +25,11 @@ html.no-js
         a#tflogo href="/"
         #counter.large-number 670
         ul#nav = render_menu
+      
+      #social
+        a href="https://www.facebook.com/TuttiFruttiRussia" target="_blank" alt="Наша страничка на фейсбуке" =' image_tag "fb_icon.png"
+        a href="http://vk.com/tuttifruttirussia" target="_blank" alt="Наша страничка Вконтакте" = image_tag "vk_icon.png"
+
       #document-container = content_for?(:content) ? yield(:content) : yield
       = render "footer"
       = render "google-analytics"
