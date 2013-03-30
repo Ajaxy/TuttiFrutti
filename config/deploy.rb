@@ -28,10 +28,15 @@ end
 set :user, "root"
 set :deploy_to, -> { "/srv/#{application}" }
 #set :deploy_via, :remote_cache
-set :use_sudo, true
+set :use_sudo, false
+default_run_options[:pty] = true
 
 set :scm, "git"
 set :repository, "git@github.com:mereskin/TuttiFrutti.git"
 
 set :rvm_type, :system
+set :rvm_ruby_string, "ruby-1.9.3-p286"
+
 set :postgresql_password, "111"
+
+ssh_options[:forward_agent] = true
