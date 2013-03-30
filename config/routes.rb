@@ -2,6 +2,7 @@ Tutti::Application.routes.draw do
   root to: "page#index"
 
   get "/about"            => "page#about", as: :about
+  get "/card"             => "page#card", as: :card
   get "/career/(:page)"   => "page#career", as: :career
   post "/career/(:page)"  => "responses#create", as: :career
 

@@ -35,7 +35,7 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
 
 #subnav{
   margin-left: 62px;
-  h3.subnav-header { background: image-url("subnav-header.png") no-repeat; font-size: 16px; text-align: center; width: 150px; height: 29px; overflow: hidden; line-height: 29px; color: #fff; font-weight: normal; text-transform: uppercase; }
+  h3.subnav-header { z-index: 3; position: relative; background: image-url("subnav-header.png") no-repeat; font-size: 16px; text-align: center; width: 150px; height: 29px; overflow: hidden; line-height: 29px; color: #fff; font-weight: normal; text-transform: uppercase; }
   ul { margin: 0; list-style: none; color: #58595b;
     li { line-height: 29px; }
     a { color: #58595b; }
@@ -64,7 +64,7 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   top: 0px;
   background: image-url("header-logo.png") no-repeat;
 }
-
+#loyalty-card-preview { position: absolute; top: 230px; left: 50px; z-index: 3; width: 232px; height: 305px; }
 #self-serve-preview { background: image-url("self-serve-preview.png") no-repeat; width: 350px; height: 300px; position: absolute; right: 22px; top: 231px; z-index: 3;}
 #self-serve-arrow { background: image-url("self-serve-arrow.png") no-repeat; width: 45px; height: 80px; position: absolute; top: 530px; right: 145px; z-index: 4; }
 #yoghurt { width: 720px; height: 475px; position: absolute; top: 171px; left: 211px; z-index: 2; }

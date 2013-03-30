@@ -25,6 +25,9 @@
       h1 Tutti Frutti йогурт мороженое
     #self-serve-preview
     #self-serve-arrow
+    #loyalty-card-preview
+      a(href="/card")
+        = image_tag "loyalty_card_small.png", alt: "Карта Тутти-Фрутти"
     #yoghurt.carousel.slide.carousel-fade data-interval="3000"
       .carousel-inner
         .active.item = image_tag "yoghurts/01.png"
@@ -39,9 +42,6 @@
         .item = image_tag "yoghurts/10.png"
         .item = image_tag "yoghurts/11.png"
         .item = image_tag "yoghurts/12.png"
-    #vote-for-tastes
-      = link_to "/tastes" do
-        = image_tag "tastes-preview.png", alt: "Выберите вкусы TuttiFrutti", width: 190, height: 177
   p.center * "Тутти-фрутти" йогурт&ndash;мороженое
 .divider
 #self-serve

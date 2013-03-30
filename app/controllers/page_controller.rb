@@ -1,12 +1,15 @@
 # encoding: utf-8
 
 class PageController < ApplicationController
-  layout "inner", only: %w[about career]
+  layout "inner", only: %w[about career card]
 
   def index
   end
 
   def about
+  end
+
+  def card
   end
 
   def career
