@@ -92,19 +92,19 @@
       address Дмитровское шоссе, 163А
       p.where 2 этаж, рядом с кинотеатром
 
-    .address-thumbnail.soon
-      = image_tag "maps/june-small.png", alt: "Тутти-фрутти ТЦ Июнь, Красногорск", height: 200, width: 300, class: "small-map"
+    .address-thumbnail
+      a href="#june-large" data-toggle="modal"
+        = image_tag "maps/june-small.png", alt: "Тутти-фрутти ТЦ Июнь, Красногорск", height: 200, width: 300, class: "small-map"
       h4 ТРЦ "Июнь" 
       address Красногорск, Коммунальный квартал, 3
       p.where 3 этаж, ресторанный дворик
-      p.opening-soon Скоро открытие!
 
-    .address-thumbnail.soon
-      = image_tag "maps/kaleydoskop-small.png", alt: "Тутти-фрутти ТЦ Калейдоскоп, Химкинский бульвар", height: 200, width: 300, class: "small-map"
+    .address-thumbnail
+      a href="#kaleydoskop-large" data-toggle="modal"
+        = image_tag "maps/kaleydoskop-small.png", alt: "Тутти-фрутти ТЦ Калейдоскоп, Химкинский бульвар", height: 200, width: 300, class: "small-map"
       h4 ТРЦ "Калейдоскоп"
       address Сходненская, 56
       p.where 3 этаж, рядом с кинотеатром
-      p.opening-soon Скоро открытие!
 
     .address-thumbnail.soon
       = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
@@ -125,3 +125,17 @@
       h3 ТРЦ "РИО"
       address Дмитровское шоссе, 163А
       .map = image_tag "maps/rio-dmitrovskoe-large.png", alt: "Тутти-фрутти ТЦ РИО, Дмитровское шоссе, Москва"
+
+  #june-large.modal.hide.fade
+    .large-map
+      h3 ТРЦ "Июнь"
+      address Красногорск, Коммунальный квартал, 3
+      p.where 3 этаж, ресторанный дворик
+      .map = image_tag "maps/june-large.png", alt: "Тутти-фрутти ТЦ Июнь, Красногорск, Москва"
+
+  #kaleydoskop-large.modal.hide.fade
+    .large-map
+      h3 ТРЦ "Калейдоскоп"
+      address Сходненская, 56
+      p.where 3 этаж, рядом с кинотеатром
+      .map = image_tag "maps/kaleydoskop-large.png", alt: "Тутти-фрутти ТЦ Калейдоскоп, Сходненская, 56, Москва"
