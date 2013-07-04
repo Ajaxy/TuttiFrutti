@@ -106,18 +106,18 @@
       address Сходненская, 56
       p.where 3 этаж, рядом с кинотеатром
 
+    .address-thumbnail
+      a href="#rio-leninsky-large" data-toggle="modal"
+        = image_tag "maps/rio-leninsky-small.png", alt: "Тутти-фрутти ТЦ РИО, Ленинский проспект, Москва", class: "small-map"
+      h4 ТРЦ "РИО" - Ленинский
+      address Ленинский проспект, вл. 109
+      p.where В атриуме на первом этаже
+
     .address-thumbnail.soon
       = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
       h4 Башня "Эволюция"
       address Москва-Сити
       p.where У выхода из метро
-      p.opening-soon Скоро открытие!
-
-    .address-thumbnail.soon
-      = image_tag "maps/rio-leninsky-small.png", alt: "Тутти-фрутти ТЦ РИО, Ленинский проспект, Москва", class: "small-map"
-      h4 ТРЦ "РИО" - Ленинский
-      address Ленинский проспект, вл. 109
-      p.where В атриуме на первом этаже
       p.opening-soon Скоро открытие!
 
   #rio-large.modal.hide.fade
@@ -139,3 +139,10 @@
       address Сходненская, 56
       p.where 3 этаж, рядом с кинотеатром
       .map = image_tag "maps/kaleydoskop-large.png", alt: "Тутти-фрутти ТЦ Калейдоскоп, Сходненская, 56, Москва"
+
+  #rio-leninsky-large.modal.hide.fade
+    .large-map
+      h3 ТРЦ "РИО" - Ленинский
+      address Ленинский проспект, вл. 109
+      p.where В атриуме на первом этаже
+      .map = image_tag "maps/rio-leninsky-large.png", alt: "Тутти-фрутти ТЦ РИО, Ленинский проспект, вл. 109, Москва"
