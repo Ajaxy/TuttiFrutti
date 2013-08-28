@@ -16,17 +16,11 @@ ssh-add -K
 
 #### Чтобы развернуть приложение на сервере (на нем уже должны стоять нужные пакеты)
 ```
-cap staging deploy:setup
-cap staging deploy:cold deploy:seed
+cap production deploy:setup
+cap production deploy:cold deploy:seed
 ```
 
 #### Чтобы обновить код
 ```
-cap staging deploy
+cap production deploy
 ```
-
-
-#### Production
-- Профиль production деплоится с ветки deploy (получить ветку в первый раз `git checkout --track origin/deploy`)
-- Команды все те же что для staging, только заменить staging на production.
-

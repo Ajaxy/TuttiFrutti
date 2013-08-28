@@ -71,13 +71,16 @@ Tutti::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => "tuttifruttirussia.com",
-    :user_name            => "ai@tuttifruttirussia.com",
-    :password             => ">TRG8En<",
+    #:domain               => "tuttifruttirussia.com",
+    :domain               => "ajaxy.ru",
+    #:user_name            => "ai@tuttifruttirussia.com",
+    :user_name            => "mail@ajaxy.ru",
+    #:password             => ">TRG8En<",
+    :password             => "tmppass1",
     :authentication       => "plain",
     :enable_starttls_auto => true  }
 
   config.middleware.use ExceptionNotifier,
     sender_address:        "error@tuttifruttirussia.com",
-    exception_recipients:  "tycooon@yandex.ru"
+    exception_recipients:  'alx.zinchuk@gmail.com'
 end
