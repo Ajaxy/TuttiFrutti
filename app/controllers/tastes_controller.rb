@@ -15,7 +15,7 @@ class TastesController < ApplicationController
       render partial: "tastes/large_taste", locals: { taste: @taste }
     else
       @tastes = Taste.order("sort_order")
-      @soy_tastes = Taste.where(:soy => 1).order("sort_order")
+      @soy_tastes = Taste.where(:soy => true).order("sort_order")
       render "index"
     end
   end
