@@ -11,7 +11,7 @@ class ResponsesMailer < ActionMailer::Base
     @name     = "#{@response.first_name} #{@response.last_name}"
 
     mail to:      'career@tuttifruttirussia.com',
-         bcc:     'service@tuttifruttirussia.com',
+         bcc:     'service@tfrussia.com',
          subject: "Отклик на вакансию «#{@position}» — #{@name}"
   end
 end

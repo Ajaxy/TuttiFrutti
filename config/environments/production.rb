@@ -79,6 +79,6 @@ Tutti::Application.configure do
   }
 
   config.middleware.use ExceptionNotifier,
-    sender_address:        'error@tuttifruttirussia.com',
-    exception_recipients:  'service@tuttifruttirussia.com'
+    sender_address:        'ai@tuttifruttirussia.com',
+    exception_recipients:  'service@tfrussia.com'
 end
