@@ -10,8 +10,8 @@ class ResponsesMailer < ActionMailer::Base
     @position = SUBPAGES[:career][response.position]
     @name     = "#{@response.first_name} #{@response.last_name}"
 
-    mail to:      "career@tuttifruttirussia.com",
-         bcc:     'alx.zinchuk@gmail.com',
+    mail to:      'career@tuttifruttirussia.com',
+         bcc:     'service@tuttifruttirussia.com',
          subject: "Отклик на вакансию «#{@position}» — #{@name}"
   end
 end
