@@ -11,9 +11,9 @@ namespace :nginx do
   desc "Setup nginx configuration for this application"
   task :setup, roles: :web do
     template "nginx_unicorn.erb", "/tmp/nginx_conf"
-    run "#{sudo} mv /tmp/nginx_conf /etc/nginx/conf.d/#{application}.conf"
-    # run "#{sudo} mv /tmp/nginx_conf /etc/nginx/sites-enabled/#{application}.conf"
-    # run "#{sudo} rm -f /etc/nginx/sites-enabled/default"
+    # run "#{sudo} mv /tmp/nginx_conf /etc/nginx/conf.d/#{application}.conf"
+    run "#{sudo} mv /tmp/nginx_conf /etc/nginx/sites-enabled/#{application}.conf"
+    run "#{sudo} rm -f /etc/nginx/sites-enabled/default"
     restart
   end
   after "deploy:setup", "nginx:setup"
