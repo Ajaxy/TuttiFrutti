@@ -32,7 +32,7 @@ set :use_sudo, false
 default_run_options[:pty] = true
 
 set :scm, "git"
-set :repository, "git@github.com:mereskin/TuttiFrutti.git"
+set :repository, "git@github.com:Ajaxy/TuttiFrutti.git"
 
 set :rvm_type, :system
 set :rvm_ruby_string, "ruby-1.9.3-p286"
