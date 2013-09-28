@@ -113,12 +113,11 @@
       address Ленинский проспект, вл. 109
       p.where В атриуме на первом этаже
 
-    .address-thumbnail.soon
-      = image_tag "maps/otrada-small.png", alt: "Тутти-фрутти, ТРЦ Отрада", height: 200, width: 300, class: "small-map"
+    .address-thumbnail
+      a href="#otrada-large" data-toggle="modal"
+        = image_tag "maps/otrada-small.png", alt: "Тутти-фрутти, ТРЦ Отрада", height: 200, width: 300, class: "small-map"
       h4 ТРЦ "Отрада"
       address 7 км Пятницкого шоссе, вл. 2, 1 этаж
-      /p.where У выхода из метро
-      p.opening-soon Скоро открытие!
 
     .address-thumbnail.soon
       = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
@@ -133,13 +132,6 @@
       address Дмитровское шоссе, 163А
       .map = image_tag "maps/rio-dmitrovskoe-large.png", alt: "Тутти-фрутти ТЦ РИО, Дмитровское шоссе, Москва"
 
-  #june-large.modal.hide.fade
-    .large-map
-      h3 ТРЦ "Июнь"
-      address Красногорск, Коммунальный квартал, 3
-      p.where 3 этаж, ресторанный дворик
-      .map = image_tag "maps/june-large.png", alt: "Тутти-фрутти ТЦ Июнь, Красногорск, Москва"
-
   #kaleydoskop-large.modal.hide.fade
     .large-map
       h3 ТРЦ "Калейдоскоп"
@@ -153,3 +145,9 @@
       address Ленинский проспект, вл. 109
       p.where В атриуме на первом этаже
       .map = image_tag "maps/rio-leninsky-large.png", alt: "Тутти-фрутти ТЦ РИО, Ленинский проспект, вл. 109, Москва"
+
+  #otrada-large.modal.hide.fade
+    .large-map
+      h3 ТРЦ "Отрада"
+      address 7 км Пятницкого шоссе, вл. 2, 1 этаж
+      .map = image_tag "maps/otrada-large.png", alt: "Тутти-фрутти ТРЦ Отрада"
