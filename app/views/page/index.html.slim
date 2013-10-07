@@ -110,14 +110,14 @@
       a href="#otrada-large" data-toggle="modal"
         = image_tag "maps/otrada2-small.png", alt: "Тутти-фрутти, ТРЦ Отрада", height: 200, width: 300, class: "small-map"
       h4 ТРЦ "Отрада"
-      address 7 км Пятницкого шоссе, вл. 2
-      p.where 1 этаж
+      address 7 км Пятницкого шоссе, вл. 2, 1&nbsp;этаж
+      p.where Франшиза
 
-    .address-thumbnail.soon
-      = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
+    .address-thumbnail
+      a href="#city-large" data-toggle="modal"
+        = image_tag "maps/city-small.png", alt: "Тутти-фрутти, Башня Эволюция, Москва-сити", height: 200, width: 300, class: "small-map"
       h4 Башня "Эволюция"
       address Москва-Сити, выход из метро «Выставочная»
-      p.opening-soon Скоро открытие!
 
   #rio-large.modal.hide.fade
     .large-map
@@ -145,3 +145,9 @@
       address 7 км Пятницкого шоссе, вл. 2
       p.where 1 этаж
       .map = image_tag "maps/otrada2-large.png", alt: "Тутти-фрутти ТРЦ Отрада"
+
+  #city-large.modal.hide.fade
+    .large-map
+      h3 Башня "Эволюция"
+      address Москва-Сити, выход из метро «Выставочная»
+      .map = image_tag "maps/city-large.png", alt: "Тутти-фрутти Башня Эволюция"
