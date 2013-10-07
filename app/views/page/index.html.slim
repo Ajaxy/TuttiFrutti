@@ -48,12 +48,6 @@
 #tasty-healthy
   h2#tasty-healthy-header Tutti Frutti не только вкусно, но и полезно.
   #tasty-healthy-pictos.row
-    .tasty-healthy-picto.p1
-    .tasty-healthy-picto.p2
-    .tasty-healthy-picto.p3
-    .tasty-healthy-picto.p4
-    .tasty-healthy-picto.p5
-    .tasty-healthy-picto.p6
   .row
     .span4
       .tasty-healthy-img.th1
@@ -119,6 +113,13 @@
       h4 Башня "Эволюция"
       address Москва-Сити, выход из метро «Выставочная»
 
+    .address-thumbnail
+      a href="#atrium-large" data-toggle="modal"
+        = image_tag "maps/atrium-small.png", alt: "Тутти-фрутти, Атриум", height: 200, width: 300, class: "small-map"
+      h4 АТРИУМ
+      address ул. Земляной вал, д. 33
+      p.where 1 этаж
+
   #rio-large.modal.hide.fade
     .large-map
       h3 ТРЦ "РИО"
@@ -151,3 +152,9 @@
       h3 Башня "Эволюция"
       address Москва-Сити, выход из метро «Выставочная»
       .map = image_tag "maps/city-large.png", alt: "Тутти-фрутти Башня Эволюция"
+
+  #atrium-large.modal.hide.fade
+    .large-map
+      h3 АТРИУМ
+      address ул. Земляной вал, д. 33
+      .map = image_tag "maps/city-large.png", alt: "Тутти-фрутти Атриум"
