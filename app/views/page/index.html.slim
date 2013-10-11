@@ -105,7 +105,8 @@
         = image_tag "maps/otrada2-small.png", alt: "Тутти-фрутти, ТРЦ Отрада", height: 200, width: 300, class: "small-map"
       h4 ТРЦ "Отрада"
       address 7 км Пятницкого шоссе, вл. 2, 1&nbsp;этаж
-      p.where Франшиза
+      p.where
+        b Франшиза
 
     .address-thumbnail
       a href="#city-large" data-toggle="modal"
@@ -113,12 +114,13 @@
       h4 Башня "Эволюция"
       address Москва-Сити, выход из метро «Выставочная»
 
-    .address-thumbnail
+    .address-thumbnail.soon
       a href="#atrium-large" data-toggle="modal"
         = image_tag "maps/atrium-small.png", alt: "Тутти-фрутти, Атриум", height: 200, width: 300, class: "small-map"
       h4 АТРИУМ
       address ул. Земляной вал, д. 33
       p.where 1 этаж
+      p.opening-soon Скоро открытие!
 
   #rio-large.modal.hide.fade
     .large-map
