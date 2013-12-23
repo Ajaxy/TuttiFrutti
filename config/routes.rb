@@ -10,6 +10,7 @@ Tutti::Application.routes.draw do
     get "/"           => "tastes#index", as: :tastes
     get "/top/(:max)" => "tastes#top"
     get "/topings"    => "tastes#topings"
+    get "/foodenergy" => "tastes#foodenergy"
     get "/show/:code" => "tastes#show", as: :taste
   end
 

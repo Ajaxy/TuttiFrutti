@@ -26,4 +26,7 @@ class TastesController < ApplicationController
   def top
     @tastes = Taste.top(params[:max])
   end
+
+  def foodenergy
+  end
 end
