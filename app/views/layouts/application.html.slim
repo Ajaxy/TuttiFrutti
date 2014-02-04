@@ -12,6 +12,8 @@ html.no-js
 
     = javascript_include_tag "http://connect.facebook.net/ru_RU/all.js#xfbml=1"
     = javascript_include_tag "http://vk.com/js/api/openapi.js?60"
+    = javascript_include_tag "application"
+    = yield :scripts
 
     javascript:
       VK.init({ apiId: 3201900, onlyWidgets: true });
@@ -34,5 +36,3 @@ html.no-js
       #document-container = content_for?(:content) ? yield(:content) : yield
       = render "footer"
       = render "google-analytics"
-    = javascript_include_tag "application"
-    = yield :scripts
