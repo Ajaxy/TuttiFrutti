@@ -1,4 +1,4 @@
-ymaps.ready(function () {
+function showMap () {
     var map = window.map = new ymaps.Map('map', {
             center: [50, 55],
             zoom: 4,
@@ -51,4 +51,4 @@ ymaps.ready(function () {
 
 //    map.setBounds(clusterer.getBounds());
     map.geoObjects.add(clusterer);
-});
+}

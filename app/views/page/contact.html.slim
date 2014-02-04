@@ -7,7 +7,6 @@ h2 Контакты
 javascript:
   CONTACTS = #{raw(CONTACTS.to_json)};
   CITIES = #{raw(CITIES.to_json)};
-
-= javascript_include_tag 'map'       
+  showMap();
 
 #map

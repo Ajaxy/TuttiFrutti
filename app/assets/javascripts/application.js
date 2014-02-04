@@ -6,3 +6,4 @@
 //= require modernizr.min
 
 //= require main
+//= require map
