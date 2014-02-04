@@ -1,0 +1,13 @@
+- @title = 'Контакты - '
+- @subnav_title = 'Контакты'
+
+h2 Контакты
+
+= javascript_include_tag 'http://api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full'
+javascript:
+  CONTACTS = #{raw(CONTACTS.to_json)};
+  CITIES = #{raw(CITIES.to_json)};
+
+= javascript_include_tag 'map'       
+
+#map

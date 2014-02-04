@@ -21,4 +21,8 @@ class PageController < ApplicationController
       end
     end
   end
+
+  def contact
+
+  end
 end
