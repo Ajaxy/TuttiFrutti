@@ -1,5 +1,5 @@
 function showMap () {
-    var map = window.map = new ymaps.Map('map', {
+    var map = new ymaps.Map('map', {
             center: [50, 55],
             zoom: 4,
             controls: ['zoomControl', 'fullscreenControl']
@@ -8,7 +8,7 @@ function showMap () {
             preset: 'islands#greenClusterIcons'
         }),
         items = [],
-        geoObjects = window.geoObjects = {};
+        geoObjects = {};
 
     $('#tools #spots')
         .on('change', function () {
