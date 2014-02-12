@@ -7,14 +7,9 @@ h2 Контакты
 
 javascript:
   CONTACTS = #{raw(CONTACTS.to_json)};
-  CITIES = #{raw(CITIES.to_json)};
   ymaps.ready(showMap);
 
 .content
   #tools
-    | Город:
-    = select_tag 'cities', options_for_select(CITIES.each_with_index.map{ |c, i| [c[:name], i] })
-    br
-    | Кафе:
-    = select_tag 'spots', options_for_select(CONTACTS.each_with_index.map{ |c, i| [c[:title], i] })
+    = select_tag 'spots', options_for_select(CONTACTS.each_with_index.map{ |c, i| [c[:name], "#{c[:type]}_#{i}"] })
   #map
