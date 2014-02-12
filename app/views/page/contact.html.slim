@@ -10,4 +10,11 @@ javascript:
   CITIES = #{raw(CITIES.to_json)};
   ymaps.ready(showMap);
 
-#map
+.content
+  #tools
+    | Город:
+    = select_tag 'cities', options_for_select(CITIES.each_with_index.map{ |c, i| [c[:name], i] })
+    br
+    | Кафе:
+    = select_tag 'spots', options_for_select(CONTACTS.each_with_index.map{ |c, i| [c[:title], i] })
+  #map

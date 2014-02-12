@@ -7,30 +7,23 @@ function showMap () {
         clusterer = new ymaps.Clusterer({
             preset: 'islands#greenClusterIcons'
         }),
-        items = [];
+        items = [],
+        geoObjects = window.geoObjects = {};
 
-    $.each(CITIES, function (i, city) {
-        var item = new ymaps.control.ListBoxItem({
-                data: { content: city.name },
-                options: { selectOnClick: false }
-            });
+    $('#tools #cities').on('change', function () {
+        var id = $(this).find(':selected').val();
 
-        item.events.add('click', function () {
-            cityList.collapse();
-            cityList.data.set('content', city.name);
-            map.setBounds(city.bounds, city.zoom, { duration: 300 });
-        });
-
-        items.push(item);
+        map.setBounds(CITIES[id].bounds, CITIES[id].zoom, { duration: 300 });
     });
 
-    var cityList = new ymaps.control.ListBox({
-            data: { content: 'Выбрать город' },
-            items: items,
-            options: { float: 'right' }
-        });
+    $('#tools #spots').on('change', function () {
+        var id = $(this).find(':selected').val();
 
-    map.controls.add(cityList);
+        map.setCenter(CONTACTS[id].coords, 14);
+        setTimeout(function () {
+            geoObjects[id].balloon.open();
+        }, 0);
+    });
 
     $.each(CONTACTS, function (i, contact) {
         var geoObject = new ymaps.Placemark(contact.coords, {
@@ -46,6 +39,7 @@ function showMap () {
             geoObject.options.set('preset', 'islands#greenStretchyIcon');
         });
 
+        geoObjects[i] = geoObject;
         clusterer.add(geoObject);
     });
 
