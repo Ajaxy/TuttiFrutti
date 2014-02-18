@@ -320,22 +320,18 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   padding: 20px;
 }
 
-.content {
-  overflow: hidden;
+.span3 #tools {
+  //text-align: center;
+  margin-left: 52px;
 }
 
-.content #tools {
-  float: left;
-  width: 18%;
+#spots {
+  font-size: 12px;
+  width: 170px;
 }
 
-.content #tools select {
-  width: 100%!important;
-}
-
-.content #map {
-  width: 80%;
-  float: right;
+#map {
+  width: 100%;
   height: 500px;
   border: 1px solid #CCCCCC;
   padding: 3px;

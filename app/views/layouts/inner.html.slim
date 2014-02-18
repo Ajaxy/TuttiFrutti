@@ -4,7 +4,8 @@
       #subnav
         h3.subnav-header = @subnav_title
         = @subnav
+      = yield :block
 
     #inner-content.span9 = yield
 
-= render template: "layouts/application"
+= render template: 'layouts/application'
