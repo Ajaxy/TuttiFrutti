@@ -22,6 +22,8 @@ group :assets do
   gem "sass-rails",   "~> 3.2.3"
   gem "jquery-ui-rails"
   gem "uglifier",     ">= 1.0.3"
+  gem 'chosen-rails'
+
 end
 
 group :development, :test do

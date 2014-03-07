@@ -32,6 +32,8 @@ function showMap () {
             }
         });
 
+    $('#tools #spots').chosen();
+
     $.each(CONTACTS, function (i, contact) {
         if (contact.type == 'city') {
             return;
