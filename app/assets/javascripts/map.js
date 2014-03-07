@@ -2,7 +2,7 @@ function showMap () {
     var map = new ymaps.Map('map', {
             center: [50, 55],
             zoom: 4,
-            controls: ['zoomControl', 'fullscreenControl', 'searchControl']
+            controls: ['zoomControl', 'fullscreenControl']
         }),
         clusterer = new ymaps.Clusterer({
             preset: 'islands#greenClusterIcons'

@@ -4,11 +4,11 @@
 = javascript_include_tag 'http://api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full'
 
 javascript:
-  CONTACTS = #{raw(CONTACTS.to_json)};
+  CONTACTS = #{raw(Contact::ITEMS.to_json)};
   ymaps.ready(showMap);
 
 - content_for :block do
   #tools
-    = select_tag 'spots', options_for_select(CONTACTS.each_with_index.map{ |c, i| [c[:name], "#{c[:type]}_#{i}"] })
+    = select_tag 'spots', options_for_select(Contact::ITEMS.each_with_index.map{ |c, i| [c[:name], "#{c[:type]}_#{i}"] })
 
 #map
