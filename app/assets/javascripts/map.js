@@ -2,7 +2,7 @@ function showMap () {
     var map = new ymaps.Map('map', {
             center: [50, 55],
             zoom: 4,
-            controls: ['zoomControl', 'fullscreenControl']
+            controls: ['zoomControl', 'fullscreenControl', 'searchControl']
         }),
         clusterer = new ymaps.Clusterer({
             preset: 'islands#greenClusterIcons'
@@ -44,12 +44,17 @@ function showMap () {
                 balloonContentHead: contact.name,
                 balloonContentBody: contact.desc
             }, {
-                preset: 'islands#greenStretchyIcon'
+                preset: 'islands#greenStretchyIcon',
+                draggable: true
             });
 
         // API 2.1-beta fix
         geoObject.events.add('balloonclose', function () {
             geoObject.options.set('preset', 'islands#greenStretchyIcon');
+        });
+
+        geoObject.events.add('dragend', function () {
+            console.log(geoObject.geometry.getCoordinates());
         });
 
         geoObjects[i] = geoObject;
