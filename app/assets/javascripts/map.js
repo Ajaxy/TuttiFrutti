@@ -10,6 +10,8 @@ function showMap () {
         items = [],
         geoObjects = {};
 
+    window.map = map;
+
     $('#tools #spots')
         .on('change', function () {
             var id = $(this).find(':selected').val().match(/\d+/),
