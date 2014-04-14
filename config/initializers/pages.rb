@@ -6,6 +6,7 @@ PAGES = {
   "Карта Тутти Фрутти"    => :card,
   "Карьера"               => :career,
   "Международный сайт"    => "http://tfyogurt.com/",
+  "Франшиза"              => "http://gingerbrandman.com/",
   "Контакты"              => :contact,
 }
 
