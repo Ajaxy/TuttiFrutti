@@ -42,6 +42,6 @@ class VoteStatus
   end
 
   def vote_codes
-    votes ? votes.map { |vote| vote.taste.code } : []
+    votes ? votes.map { |vote| vote.taste.present? && vote.taste.code } : []
   end
 end
