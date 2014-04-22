@@ -4,8 +4,11 @@ class TastesController < ApplicationController
   layout "inner"
 
   def index
-    @tastes = Taste.where(:soy => false).order("sort_order")
-    @soy_tastes = Taste.where(:soy => true).order("sort_order")
+    @tastes = {
+      regular: Taste.where(kind: 0).order("sort_order"),
+      soy: Taste.where(kind: 1).order("sort_order"),
+      sherbets: Taste.where(kind: 2).order("sort_order")
+    }
   end
 
   def show

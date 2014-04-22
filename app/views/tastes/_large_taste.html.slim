@@ -5,8 +5,8 @@ div
       a href="/api/vote" data-code=[taste.code] data-vote="true" data-vote-method="DELETE" class="btn-dislike" title="Больше не нравится"
     - else
       a href="/api/vote" data-code=[taste.code] data-vote="true" data-vote-method="PUT" class="btn-like" title="Мне нравится!"
-  = image_tag "tastes/#{taste.code}_L.png", alt: taste.name
-  .summary
+  = image_tag "tastes/#{taste.code}_L.jpg", alt: taste.name
+  /.summary
     label style="background-color: ##{taste.color};" Рекомендуем добавить:
     dl
       dt Йогурт

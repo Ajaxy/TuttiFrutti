@@ -56,10 +56,13 @@ h2#tastes-header Вкусы Tutti Frutti
 #fruits-top12
 a(href="/tastes/top/12")
   #logo-top12
-#tastes-container.row = render @tastes, show_votes: false
+#tastes-container.row = render @tastes[:regular], show_votes: false
 
 = image_tag "soy-tastes-header.png", :alt => "Постные йогурты"
-#tastes-container.row = render @soy_tastes, show_votes: false
+#tastes-container.row = render @tastes[:soy], show_votes: false
+
+= image_tag "soy-tastes-header.png", :alt => "Постные йогурты"
+#tastes-container.row = render @tastes[:sherbets], show_votes: false
 
 #taste-modal.modal.hide.fade.in tabindex="-1"
   .modal-body

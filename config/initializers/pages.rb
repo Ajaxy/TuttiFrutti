@@ -7,7 +7,7 @@ PAGES = {
   "Карьера"               => :career,
   "Международный сайт"    => "http://tfyogurt.com/",
   "Франшиза"              => "http://gingerbrandman.com/",
-  "Контакты"              => :contact,
+  "Адреса кафе"              => :contact,
 }
 
 SUBPAGES = {
