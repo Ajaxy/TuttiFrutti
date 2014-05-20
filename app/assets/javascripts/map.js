@@ -36,13 +36,18 @@ function showMap () {
 
     $('#tools #spots').chosen();
 
+    var currentCity = '';
+
     $.each(CONTACTS, function (i, contact) {
         if (contact.type == 'city') {
+            currentCity = contact.name;
             return;
         }
 
         var geoObject = new ymaps.Placemark(contact.coords, {
-                iconContent: contact.name,
+                spot: contact.name,
+                city: currentCity,
+                iconContent: currentCity,
                 balloonContentHead: contact.name,
                 balloonContentBody: contact.desc
             }, {
@@ -65,4 +70,14 @@ function showMap () {
 
 //    map.setBounds(clusterer.getBounds());
     map.geoObjects.add(clusterer);
+
+    map.events.add('boundschange', function (e) {
+        var newZoom = e.get('newZoom');
+
+        if (newZoom == e.get('oldZoom')) return;
+
+        $.each(geoObjects, function (i, geoObject) {
+            geoObject.properties.set('iconContent', geoObject.properties.get(newZoom <= 7 ? 'city' : 'spot'));
+        });
+    });
 }
