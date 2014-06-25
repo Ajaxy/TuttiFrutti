@@ -1,0 +1,186 @@
+= javascript_include_tag 'lightbox-2.6.min.js'
+= javascript_include_tag 'jquery.mousewheel.js'
+= javascript_include_tag 'jquery.jscrollpane.js'
+= javascript_include_tag 'jquery.slides.min.js'
+= javascript_include_tag 'franchising.js'
+
+#dark
+
+.modal.modal-anketa
+  .close
+    a href="" title=("Закрыть окно")  Закрыть
+  .modal-title
+    .orange Заявка
+    p все поля обязательны для заполнения
+  .modal-content
+    form
+      p
+        input.input-text id="" name="person" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("контактное лицо") /
+      p
+        input.input-text id="" name="phone" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("номер телефона") /
+      p
+        input.input-text id="" name="email" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value="e-mail" /
+      p
+        select.input-text id=""
+          option город
+      p
+        textarea.input-text ваши комментарии на вопросы
+      p.button
+        button id="" type="submit"
+          = image_tag 'button4.png', alt: 'Заполните анкету'
+#container
+  #wrapper
+    #content
+      .big-text
+        h2
+          = image_tag 'text-top.gif', alt: 'Франшиза Tutti Frutti Frozen Yogurt'
+      .block-pics
+        = image_tag 'pic-big.jpg', alt: 'Виды'
+      .block-content.block-map
+        .info-content
+          = image_tag 'map.gif', class: 'map-img'
+          .title-map
+            | Карта Tutti Frutti Frozen Yogurt
+            br по всему миру
+          .country-list.scroll-list
+            ul
+              li Afghanistan
+              li Austria
+              li Bangladesh
+              li Burma
+              li Egypt
+              li France
+              li Hungary
+              li Iraq
+              li Ireland
+              li Italy
+              li Korea
+              li Monaco
+              li New Zealand
+              li Oman
+              li Qatar
+              li Sri Lanka
+              li Switzerland
+              li Thailand
+              li Bahrain
+              li Brunei
+              li Cambodia
+              li China - Hong Kong
+              li Dominican Rep.
+              li Guam
+              li Indonesia
+              li Jamaica
+              li Nigeria
+              li Peru
+              li Singapore
+              li Spain
+              li Tahiti
+              li United Kingdom
+              li USA
+              li Russia
+              li Saudi Arabia
+              li Vietnam
+              li Australia
+              li Brazil
+              li Philippines
+              li Taiwan
+              li Canada
+              li Mexico
+              li Pakistan
+              li Malaysia
+              li Costa Rica
+              li (Coming Soon)
+              li Germany
+              li (Coming Soon)
+              li UAE
+              li (Coming Soon)
+      .block-content.block-steps
+        .big-text
+          h2
+            = image_tag 'text-top2.gif', alt: '12 шагов к открытию своего кафе'
+        .info-content
+          = image_tag 'steps-pic.gif', alt: '12 шагов'
+      .block-content.block-partners
+        .big-text
+          h2
+            = image_tag 'text-top3.gif', alt: 'Профиль партнера'
+        .info-content
+          ul
+            li.title Общие характеристики
+            li.title Желательные характеристики
+            li.title Нежелательные характеристики
+            li
+              .cnt
+                ul
+                  li Опыт операционного управления бизнеса  – желательно в розничной торговле, а так же участие в розничных Startup проектах
+                  li Ярко выраженные лидерские качества.
+                  li Опыт работы  в области продаж и маркетинга
+                  li Финансовые возможности – наличие собственных средств, необходимых для развития проекта франчайзинга
+                  li Хорошие переговорные навыки – должен уметь слушать, работать с возражениями,
+                  li Опыт и  умение работать с людьми  – мы ожидаем, будет открыт новому опыту, умеет  воспринимать чужие идеи и комментарии, критику.
+                  li Активный, а не пассивный инвестор – понимает необходимость постоянного реинвестирования прибыли.
+                  li Честность, добросовестность
+                  li Доверие бренду Tutti Frutti  и лояльность к нему – вера в бренд и, приятие всех его процедур и стандартов, способность работать с брендом самостоятельно, соблюдая при этом установленные ограничения.
+            li
+              .cnt
+                ul
+                  li Сбалансированная доходность – понимает связь между качеством предлагаемого продукта, уровнем обслуживания гостей и необходимостью «зарабатывать деньги», и устанавливает правильный баланс
+                  li Опыт работы в фастфуде, либо в смежной сфере (продукты питания, сервис и обслуживание).
+                  li Обязательство ежедневно быть в процессе  (либо сам владелец, либо управляющий)
+                  li Финансовые возможности и желание развивать  сеть
+                  li Опытный пользователь основных компьютерных программ (MSOffice – Word, Excel, Power Point, Outlook)
+            li
+              .cnt
+                ul
+                  li Пассивный финансовый инвестор
+                  li Намерение использовать бренд Tutti Frutti только в качестве генератора денежных средств, необходимых для поддержки другого бизнеса
+                  li Невозможность соблюдать обязательства взятые на себя перед Компанией.
+                  li Предыдущая уголовная ответственность или банкротство
+                  li Конфликт интересов (например, является сотрудником  или владельцем конкурирующего бренда)
+        .btns
+          ul
+            li.button
+              a href="" title="Презентация"
+                = image_tag 'button1.png', alt: 'Презентация'
+            li.button
+              a href="" title=("Коммерческое предложение")
+                = image_tag 'button2.png', alt: 'Коммерческое предложение'
+
+      .block-content.block-bethepartner
+        .big-text
+          h2
+            = image_tag 'text-top4.gif', alt: 'Хотите стать партнером?'
+        .info-content
+          .btns
+            ul
+              li.button
+                a#anketa-form href="" title=("Заполните анкету")
+                  = image_tag 'button3.png', alt: 'Заполните анкету'
+      .block-content.block-address
+        .title-content
+          h2 В настоящий момент мы ищем партнеров в следующих городах
+        .list-adress
+          ul
+            li Москва
+            li Казань
+            li Челябинск
+            li Нижний Новгород
+            li Хабаровск
+            li Новокузнецк
+            li Санкт-Петербург
+            li Новосибирск
+            li Самара
+            li Ростов-на-Дону
+            li Уфа
+            li Волгоград
+            li Екатеринбург
+            li Тюмень
+            li Красноярск
+            li Иркутск
+            li Кемерово
+            li
+            li Краснодар
+            li Пермь
+            li Саратов
+            li Томск
+            li Омск

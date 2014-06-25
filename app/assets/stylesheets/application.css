@@ -2,4 +2,7 @@
  *= require jquery.ui.all
  *= require chosen
  *= require main
+ *= require partners
+ *= require jquery.jscrollpane
+ *= require lightbox
  */

@@ -1,0 +1,154 @@
+body.page-partners, body.page-franchising {
+
+    font: 13px 'HeliosC', Arial, sans-serif; line-height:16px; color: #58595b; background: #fff;
+
+    a { color:#936037; text-decoration:none }
+    a:hover { text-decoration:underline }
+
+    #dark { display:none; height:100%; background:#000; z-index:99; opacity:0.7; position:fixed; top:0; left:0; width:100% }
+
+
+    h1,h2,h3,h4 { font-weight:normal }
+    h2 { font-size:54px }
+    h3 { font-size:27px }
+    h4 { font-size:15.99px; font-weight:600; margin-bottom:5px }
+
+    .title-white { color:#fff }
+    .center { text-align: center; }
+    .g-line { padding-bottom:10px }
+
+    /* Grid */
+    #container  { min-height:100%; position:relative; width:990px; margin:0 auto }
+    #wrapper    { padding:10px 0 15px; }
+    #content    {  }
+    .content-width { width: 870px; margin: 0 auto; overflow: hidden; }
+
+
+    /* Content */
+    #content .big-text { text-align:center; color:#fff; padding:30px 0 0 60px; position:relative; z-index:21 }
+    #content .block-pics { text-align:center; padding:10px 0 30px }
+
+    #content .block-content { padding:0 0 40px; position:relative; margin:0 60px 30px; overflow:hidden; background:image-url("g-line.png") no-repeat 0 100%; min-height:100px }
+    #content .block-content .title-content { color:#b2bb1c; margin-bottom:20px }
+    #content .block-content .title-content h2 { font-size:52px; line-height:75px; }
+    #content .block-content .title-content .note { margin-top:10px }
+
+
+    #content .block-slider { position:relative; margin:10px 30px 0; height:310px; padding:30px }
+    #content .block-slider .logo-ru { z-index:20; position:absolute; top:-20px; right:80px }
+    #content .block-slider #slides { border-radius:3px; border:2px solid #fff; box-shadow:3px 3px 6px rgba(0,0,0,0.2) }
+
+    #content .block-slider .slidesjs-navigation { display:block; background:image-url("gbm-icons.png") no-repeat; opacity:0.5; text-indent:-99999px; width:31px; height:28px; z-index:2; position:absolute; top:180px }
+    #content .block-slider .slidesjs-navigation.slidesjs-previous { background-position:0 -237px; left:-20px }
+    #content .block-slider .slidesjs-navigation.slidesjs-previous:hover { opacity:1 }
+    #content .block-slider .slidesjs-navigation.slidesjs-next { background-position:0 -209px; right:-20px }
+    #content .block-slider .slidesjs-navigation.slidesjs-next:hover { opacity:1 }
+
+    #content .block-slider .slidesjs-pagination { display:none }
+
+    #content .block-content.block-map { padding-bottom:70px; margin-bottom:0 }
+    #content .block-content.block-map .info-content { position:relative; height:460px; overflow:hidden; clear:both; }
+    #content .block-content.block-map .info-content .map-img { position:absolute; right:0; top:36px }
+    #content .block-content.block-map .title-map { color:#b2bb1c; font-size:16px; line-height:21px; margin-bottom:10px }
+    #content .block-content.block-map .info-content .country-list { height:390px; width:140px; position:relative; z-index:2; outline: none !important; }
+    #content .block-content.block-map .info-content .country-list ul { margin: 0; }
+    #content .block-content.block-map .info-content .country-list ul li { list-style: none; line-height:14px }
+    #content .block-content.block-map .info-content .country-list ul li a { color:#58595b }
+
+
+    #content .block-content.block-bethepartner { background:none; margin-bottom:0; padding-bottom:0 }
+
+    #content .block-content.block-address { background:none; padding-bottom:0 }
+    #content .block-content.block-address .title-content {  }
+    #content .block-content.block-address .title-content h2 { font-size:18px; font-weight:bold; line-height:24px }
+    #content .block-content.block-address .list-adress ul { margin:0; overflow:hidden }
+    #content .block-content.block-address .list-adress li { display:inline-block; *display:inline; zoom:1; vertical-align:top; width:142px; }
+
+
+    #content .block-content.block-desc .l { float:left; width:420px; margin-right:40px }
+    #content .block-content.block-desc p { padding-bottom:15px; line-height:14px }
+
+
+    #content .block-content.block-howto { padding-top:20px }
+    #content .block-content.block-howto .title-content { position:absolute; left:0; top:0 }
+    #content .block-content.block-howto .l { float:left; width:320px; padding-top:100px }
+    #content .block-content.block-howto .l ul li { padding:16px 0 0 80px; color:#58595b; line-height:26px; font-size:22px; position:relative; min-height:62px }
+    #content .block-content.block-howto .l ul li .count-i { position:absolute; left:0; top:2px; background:image-url("gbm-icons.png") no-repeat; display:block; width:52px; height:64px }
+    #content .block-content.block-howto .l ul li .count-i.one-count { background-position:-64px -196px }
+    #content .block-content.block-howto .l ul li .count-i.two-count { background-position:-130px -196px }
+    #content .block-content.block-howto .l ul li .count-i.three-count { background-position:-208px -196px }
+    #content .block-content.block-howto .l ul li .count-i.four-count { background-position:-278px -196px }
+    #content .block-content.block-howto .r { float:right; width:520px; position:relative }
+    #content .block-content.block-howto .r ul { margin-right:-22px }
+    #content .block-content.block-howto .r ul li { position:relative; display:inline-block; *display:inline; zoom:1; vertical-align:top; margin:0 22px 12px 0 }
+    #content .block-content.block-howto .r ul li .small-preview { border-radius:3px; border:2px solid #fff; box-shadow:3px 3px 6px rgba(0,0,0,0.2); width:240px; height:170px }
+    #content .block-content.block-howto .r .note { position:absolute; bottom:-15px; right:40px }
+
+    #content .block-content.block-howto .title-content-two { clear:both; padding-top:10px; position:inherit }
+    #content .block-content.block-howto .info-content-two { padding-bottom:10px }
+    #content .block-content.block-howto .info-content-two ul { margin-right:-70px; overflow:hidden }
+    #content .block-content.block-howto .info-content-two ul li { display:inline-block; *display:inline; zoom:1; vertical-align:top; line-height:24px; font-size:20px; margin-right:70px }
+    #content .block-content.block-howto .info-content-two ul li span { font-size:30px }
+
+    #content .block-content.block-useful {  }
+    #content .block-content.block-useful .list-why { margin-bottom:20px }
+    #content .block-content.block-useful .list-why ul { margin-right:-25px }
+    #content .block-content.block-useful .list-why ul li { display:inline-block; *display:inline; zoom:1; vertical-align:top; margin-right:25px; text-align:center }
+    #content .block-content.block-useful .list-why ul li span { text-indent:-99999px; display:block; height:190px; width:144px; background:image-url("gbm-icons.png") no-repeat }
+    #content .block-content.block-useful .list-why ul li.one span { background-position:0 0; width:170px }
+    #content .block-content.block-useful .list-why ul li.two span { background-position:-182px 0 }
+    #content .block-content.block-useful .list-why ul li.three span { background-position:-366px 0; width:150px }
+    #content .block-content.block-useful .list-why ul li.four span { background-position:-550px 0 }
+    #content .block-content.block-useful .list-why ul li.five span { background-position:-734px 0 }
+
+
+    #content .block-content.block-useful .info-content .l { float:left; width:440px; margin-right:30px }
+    #content .block-content.block-useful .info-content .block-info { margin-bottom:25px }
+
+    #content .block-content.block-partners { margin-bottom:0 }
+    #content .block-content.block-partners .info-content { padding-top:40px }
+    #content .block-content.block-partners .info-content > ul { margin:0 -50px -10px 0 }
+    #content .block-content.block-partners .info-content > ul > li { padding-left:24px; background:image-url("point.gif") no-repeat 0 5px; display:inline-block; *display:inline; zoom:1; overflow:hidden; vertical-align:top; width:250px; margin:0 27px 30px 0 }
+    #content .block-content.block-partners .info-content > ul > li.title { font-weight:bold; height:20px; margin:0 0 20px; color:#b2bb1c; font-size:15px; width:300px; padding:0; background:none }
+    #content .block-content .btns { text-align:center; padding:20px 0 }
+    #content .block-content .btns li { display:inline-block; *display:inline; zoom:1; vertical-align:top; margin-left:20px }
+
+    #content .block-content.block-steps { padding-bottom:60px; margin-bottom:20px; text-align:center }
+    #content .block-content.block-steps .big-text { padding-bottom:20px }
+
+    #content .block-content.block-more { min-height:inherit; background:none; margin:0; padding:0; text-align:center; color:#fff; font-size:20px }
+    #content .block-content.block-more a { color:#fff; text-decoration:underline }
+    #content .block-content.block-more a:hover { text-decoration:none }
+
+    #content .block-content.block-other { background:none; margin:0 }
+    #content .block-content.block-other .big-text { padding-left:0; text-align:center }
+    #content .block-content.block-other .info-content { padding:20px 0 0 30px }
+    #content .block-content.block-other .info-content ul { margin:0 -33px -30px 0 }
+    #content .block-content.block-other .info-content li { display:inline-block; *display:inline; zoom:1; vertical-align:top; width:450px; margin:0 30px 30px 0 }
+    #content .block-content.block-other .info-content li img { width:450px }
+    #content .block-content.block-other .info-content li .title { color:#b2bb1c; font-weight:bold; font-size:16px; padding:15px 0 10px }
+    #content .block-content.block-other .info-content li .content {  }
+
+    #content .block-content.block-contacts { background:none; padding:40px 0 0 30px; margin:0 0 30px }
+    #content .block-content.block-contacts .title-content h2 { font-size:18px; font-weight:bold; line-height:24px }
+
+    .input-text { border-radius:4px; border:1px solid #ededed; font: 14px 'HeliosC', Arial, sans-serif; width:320px; padding:4px 8px; color:#bcbec0; box-shadow:inset 1px -1px 2px rgba(0,0,0,.1) }
+    select.input-text { width:339px }
+    textarea.input-text { line-height:16px; width:95%; height:180px }
+
+    .button a:active { position:relative; top:2px }
+    .button button { outline:none }
+    .button button:active { position:relative; top:2px }
+
+
+    /* Modal */
+    .modal { margin: 0; display:none; z-index:120; position:fixed; top:80px; padding:35px; width:670px; margin-left:-335px; left:50%; background:#fff; border-radius:8px }
+    .modal .close { float:right }
+    .modal .close a { width:15px; height:14px; background:image-url("close-i.gif") no-repeat; text-indent:-9999px; display:block }
+    .modal .modal-title {  }
+    .modal .modal-title .orange { color:#f58025; padding-bottom:4px; font-weight:bold; text-transform: uppercase; font-size:25px; letter-spacing:-.8px }
+    .modal .modal-title p { color:#bcbec0; font-size:15px }
+    .modal .modal-content {  }
+    .modal .modal-content p {  }
+    .modal .modal-content p button { background:none; border:0; cursor:pointer; margin-left:-8px }
+}

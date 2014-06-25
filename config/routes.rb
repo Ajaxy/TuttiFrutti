@@ -5,6 +5,8 @@ Tutti::Application.routes.draw do
   get "/card"             => "page#card", as: :card
   get "/career/(:page)"   => "page#career", as: :career
   get "/contact"          => "page#contact", as: :contact
+  get "/franchising"      => "page#franchising", as: :franchising
+  get "/renters"          => "page#renters", as: :renters
   post "/career/(:page)"  => "responses#create", as: :career
 
   scope "/tastes" do
