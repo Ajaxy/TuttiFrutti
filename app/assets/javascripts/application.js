@@ -9,3 +9,9 @@
 
 //= require main
 //= require map
+
+//= require lightbox-2.6.min
+//= require jquery.jscrollpane
+//= require jquery.mousewheel
+//= require jquery.slides.min
+//= require franchising
