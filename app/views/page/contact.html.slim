@@ -13,3 +13,9 @@ javascript:
 
 #map
 
+.spots
+  - Contact::ITEMS.each do |item|
+    - next if item[:type] != 'spot'
+    .spot
+      .name == item[:name]
+      .desc == item[:desc]

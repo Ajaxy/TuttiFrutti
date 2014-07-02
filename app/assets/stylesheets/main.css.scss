@@ -374,3 +374,21 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
   border: 1px solid #CCCCCC;
   padding: 3px;
 }
+
+.spots {
+  margin-top: 20px;
+
+  .spot {
+    float: left;
+    height: 150px;
+    text-align: left;
+    width: 25%;
+    font: 11px;
+    padding-right: 15px;
+    box-sizing: padding-box;
+
+    .name {
+      font-weight: bold;
+    }
+  }
+}
