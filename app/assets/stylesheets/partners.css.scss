@@ -1,4 +1,4 @@
-body.page-partners, body.page-franchising {
+body.page-renters, body.page-franchising {
 
     font: 13px 'HeliosC', Arial, sans-serif; line-height:16px; color: #58595b; background: #fff;
 
@@ -13,6 +13,11 @@ body.page-partners, body.page-franchising {
     h3 { font-size:27px }
     h4 { font-size:15.99px; font-weight:600; margin-bottom:5px }
 
+    ul {
+        margin: 0;
+        li { list-style: none; }
+    }
+    
     .title-white { color:#fff }
     .center { text-align: center; }
     .g-line { padding-bottom:10px }
