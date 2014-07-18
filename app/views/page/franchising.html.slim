@@ -7,24 +7,26 @@
     .orange Заявка
     p все поля обязательны для заполнения
   .modal-content
-    form
+    form method="post"
       p
-        input.input-text id="" name="person" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("контактное лицо") /
+        input.input-text id="" name="name" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("контактное лицо") /
       p
         input.input-text id="" name="phone" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("номер телефона") /
       p
         input.input-text id="" name="email" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value="e-mail" /
       p
-        select.input-text id=""
-          option город
+        input.input-text id="" name="city" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value="город" /
       p
-        textarea.input-text ваши комментарии на вопросы
+        textarea.input-text name="comment" ваши комментарии на вопросы
+      input name="authenticity_token" type="hidden" value=(form_authenticity_token) />
       p.button
-        button id="" type="submit"
+        button id="" type="submit" name="submit"
           = image_tag 'button4.png', alt: 'Заполните анкету'
 #container
   #wrapper
     #content
+      - if params[:submit]
+        div Спасибо. Ваша заявка успешно отправлена.
       .big-text
         h2
           = image_tag 'text-top.gif', alt: 'Франшиза Tutti Frutti Frozen Yogurt'

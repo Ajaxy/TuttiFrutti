@@ -25,4 +25,10 @@ class PageController < ApplicationController
   def contact
 
   end
+
+  def franchising
+    unless params[:submit].nil?
+      FranchisingMailer.notify(params).deliver
+    end
+  end
 end
