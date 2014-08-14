@@ -15,7 +15,11 @@ javascript:
 
 .spots
   - Contact::ITEMS.each do |item|
-    - next if item[:type] != 'spot'
-    .spot
-      .name == item[:name]
-      .desc == item[:desc]
+    - next if item[:fake]
+    - if item[:type] != 'spot'
+      .clear
+      h4 == item[:name]
+    - else
+      .spot
+        .name == item[:name]
+        .desc == item[:desc].sub(/^г\. [\wа-яё\-\s]+,\s+/iu, '')

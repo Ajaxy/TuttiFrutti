@@ -8,6 +8,7 @@ input, textarea { width: 350px; }
 .center { text-align: center; }
 .justify { text-align: justify; }
 .modal-backdrop { background-color: #fff !important; }
+.clear { clear: both; }
 ul.text li { margin-bottom: 7px; }
 #header { background: image-url("main-header.png") no-repeat; height: 195px; position: relative; margin-bottom: 40px;
   #counter { position: absolute; top: 60px; right: 45px; letter-spacing: 21px; }
@@ -378,6 +379,11 @@ ul.social { list-style: none; margin: 15px 0 0 10px; display: inline-block;
 
 .spots {
   margin-top: 20px;
+
+  h4 {
+    text-align: left;
+    color: #b2bb1c;
+  }
 
   .spot {
     float: left;
