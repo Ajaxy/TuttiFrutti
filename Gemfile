@@ -33,5 +33,5 @@ group :development, :test do
 end
 
 group :production do
-  gem "exception_notification"
+  gem "exception_notification", "~> 3.0.0"
 end
