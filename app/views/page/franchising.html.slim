@@ -9,16 +9,16 @@
   .modal-content
     form method="post"
       p
-        input.input-text id="" name="name" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("контактное лицо") /
+        input.input-text id="" name="name" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("контактное лицо")
       p
-        input.input-text id="" name="phone" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("номер телефона") /
+        input.input-text id="" name="phone" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value=("номер телефона")
       p
-        input.input-text id="" name="email" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value="e-mail" /
+        input.input-text id="" name="email" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value="e-mail"
       p
-        input.input-text id="" name="city" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value="город" /
+        input.input-text id="" name="city" onblur="setDefault(this);" onfocus="setClear(this);" type="text" value="город"
       p
         textarea.input-text name="comment" ваши комментарии на вопросы
-      input name="authenticity_token" type="hidden" value=(form_authenticity_token) />
+      input name="authenticity_token" type="hidden" value=(form_authenticity_token)
       p.button
         button id="" type="submit" name="submit"
           = image_tag 'button4.png', alt: 'Заполните анкету'
