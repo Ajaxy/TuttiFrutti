@@ -51,8 +51,8 @@ function showMap () {
                 balloonContentHead: contact.name,
                 balloonContentBody: contact.desc
             }, {
-                preset: 'islands#greenStretchyIcon',
-                draggable: true
+                preset: 'islands#greenStretchyIcon'
+//                draggable: true
             });
 
         // API 2.1-beta fix
