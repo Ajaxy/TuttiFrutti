@@ -18,7 +18,7 @@ function showMap () {
                 spot = CONTACTS[id];
 
             if (spot.type == 'city') {
-                map.setBounds(spot.bounds, spot.zoom, { duration: 300 });
+                map.setBounds(spot.bounds, { duration: 300 });
             } else {
                 map.setCenter(spot.coords, 14);
                 setTimeout(function () {
