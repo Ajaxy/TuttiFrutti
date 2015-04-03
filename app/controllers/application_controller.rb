@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def handle_unverified_request
+    raise ActionController::InvalidAuthenticityToken
+  end
+
   def current_user
     @current_user ||= User.find(cookies.signed[:user_id]) if cookies.signed[:user_id]
   end

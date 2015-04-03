@@ -27,7 +27,7 @@ class PageController < ApplicationController
   end
 
   def franchising
-    unless params[:submit].nil?
+    if params[:submit].present?
       FranchisingMailer.notify(params).deliver
     end
   end

@@ -27,6 +27,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'debugger'
   gem "capybara"
   gem "letter_opener"
   gem "rspec-rails"
