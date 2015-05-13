@@ -1,7 +1,7 @@
 - @title = 'Контакты - '
 - @subnav_title = 'Контакты'
 
-= javascript_include_tag 'http://api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full'
+= javascript_include_tag 'https://api-maps.yandex.ru/2.1/?lang=ru-RU'
 
 javascript:
   CONTACTS = #{raw(Contact::ITEMS.to_json)};
