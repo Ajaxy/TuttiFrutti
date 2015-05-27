@@ -15,24 +15,38 @@ ul.text li { margin-bottom: 7px; }
   .large-number { font-size: 45px; color: #b2bb1c; font-weight: bold; }
 }
 
-#footer { background: image-url("footer.png") no-repeat bottom; min-height: 400px; margin-bottom: 90px;
-  ul { list-style: none; position: absolute; bottom: 130px; left: 50%; background: #fff; border-radius: 20px; padding: 0 15px; margin-left: -380px;
+#footer {
+  background: image-url("footer.png") no-repeat bottom; min-height: 380px; position: relative;
+  
+  ul {
+    list-style: none; position: absolute; bottom: 40px; left: 50%; background: #fff; border-radius: 20px; padding: 0 15px; margin-left: -380px;
+    
     li { list-style: none; float: left; margin: 5px 10px; }
     a { color: #58585a; text-transform: uppercase; font-size: 11px; }
   }
+}
 
-  #address { font-size: 12px; position: absolute; bottom: 40px; width: 100%; line-height: 14px; }
+.banners {
+  height: 70px;
+  width: 100%;
+  margin-bottom: 20px;
 
-  .banners {
-    bottom: 15px;
-    position: absolute;
-    right: 0;
+  td {
+    width: 25%;
+    text-align: center;
 
-    .banner {
-      float: right;
+    &.title {
+      font-size: large;
+    }
+
+    img {
+      max-height: 70px;
+      max-width: 90%;
     }
   }
 }
+
+#address { font-size: 12px; width: 100%; line-height: 14px; margin-bottom: 20px; }
 
 ul li { list-style: none; }
 
